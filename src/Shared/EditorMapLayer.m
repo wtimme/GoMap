@@ -66,6 +66,24 @@ static const CGFloat Pixels_Per_Character = 8.0;
 }
 @end
 
+#if TARGET_OS_MAC
+
+@interface NSImage(CGImage)
+
+- (CGImageRef)CGImage;
+
+@end
+
+@implementation NSImage(CGImage)
+
+- (CGImageRef)CGImage {
+    return [self CGImageForProposedRect:nil context:nil hints:nil];
+}
+
+@end
+
+#endif
+
 
 @implementation EditorMapLayer
 
