@@ -1,0 +1,747 @@
+
+/* Class = "UIViewController"; title = "First"; ObjectID = "2"; */
+"2.title" = "First";
+
+/* Class = "UILabel"; text = "Mapnik Tiles"; ObjectID = "0Hk-5U-2Kg"; */
+"0Hk-5U-2Kg.text" = "Mapnik Tiles";
+
+/* Class = "UITextField"; placeholder = "no"; ObjectID = "0mW-YK-ajm"; */
+"0mW-YK-ajm.placeholder" = "no";
+
+/* Class = "UITextField"; placeholder = "type"; ObjectID = "0zS-QM-zwQ"; */
+"0zS-QM-zwQ.placeholder" = "type";
+
+/* Class = "UINavigationItem"; title = "Display"; ObjectID = "186-0W-Nrr"; */
+"186-0W-Nrr.title" = "Display";
+
+/* Class = "UITabBarItem"; title = "All Tags"; ObjectID = "19J-sp-UTX"; */
+"19J-sp-UTX.title" = "All Tags";
+
+/* Class = "UITableViewSection"; headerTitle = "I don't have an account"; ObjectID = "1Mo-xe-IbY"; */
+"1Mo-xe-IbY.headerTitle" = "I don't have an account";
+
+/* Class = "UINavigationItem"; title = "Credits"; ObjectID = "1SU-BF-K3n"; */
+"1SU-BF-K3n.title" = "Credits";
+
+/* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "1SY-O5-qJR"; */
+"1SY-O5-qJR.title" = "Cancel";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "1Yx-Ce-yfq"; */
+"1Yx-Ce-yfq.title" = "Back";
+
+/* Class = "UILabel"; text = "GPX Tracks"; ObjectID = "1f0-8q-yCi"; */
+"1f0-8q-yCi.text" = "GPX Tracks";
+
+/* Class = "UILabel"; text = "Get Directions"; ObjectID = "1xx-L0-hKm"; */
+"1xx-L0-hKm.text" = "Get Directions";
+
+/* Class = "UIButton"; normalTitle = "Bing attribution"; ObjectID = "2Ka-IT-DQC"; */
+"2Ka-IT-DQC.normalTitle" = "Bing attribution";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "2Q5-Vd-FED"; */
+"2Q5-Vd-FED.text" = "Title";
+
+/* Class = "UITableViewSection"; footerTitle = "If you are mapping somewhere with limited connectivity you can download the aerial and/or Mapnik tiles for the next two higher zoom levels that are in the current view area."; ObjectID = "2TW-mO-uX2"; */
+"2TW-mO-uX2.footerTitle" = "If you are mapping somewhere with limited connectivity you can download the aerial and/or Mapnik tiles for the next two higher zoom levels that are in the current view area.";
+
+/* Class = "UITableViewSection"; headerTitle = "Download zoomed tiles"; ObjectID = "2TW-mO-uX2"; */
+"2TW-mO-uX2.headerTitle" = "Download zoomed tiles";
+
+/* Class = "UILabel"; text = "Clear Cache"; ObjectID = "2ZY-zi-luF"; */
+"2ZY-zi-luF.text" = "Clear Cache";
+
+/* Class = "UITabBarItem"; title = "Attributes"; ObjectID = "2cB-FV-ozw"; */
+"2cB-FV-ozw.title" = "Attributes";
+
+/* Class = "UIButton"; normalTitle = "Comment"; ObjectID = "2g1-vb-Cjc"; */
+"2g1-vb-Cjc.normalTitle" = "Comment";
+
+/* Class = "UILabel"; text = "OpenStreetMap Login"; ObjectID = "34N-Ep-rpf"; */
+"34N-Ep-rpf.text" = "OpenStreetMap Login";
+
+/* Class = "UITableViewSection"; headerTitle = "Language"; ObjectID = "355-dx-Oi8"; */
+"355-dx-Oi8.headerTitle" = "Language";
+
+/* Class = "UILabel"; text = "Details"; ObjectID = "3qk-15-BUc"; */
+"3qk-15-BUc.text" = "Details";
+
+/* Class = "UIButton"; normalTitle = "99 Days"; ObjectID = "4s8-Bj-JOX"; */
+"4s8-Bj-JOX.normalTitle" = "99 Days";
+
+/* Class = "UITextField"; placeholder = "api.openstreetmap.org"; ObjectID = "66J-ih-Lfh"; */
+"66J-ih-Lfh.placeholder" = "api.openstreetmap.org";
+
+/* Class = "UITableViewSection"; footerTitle = "Specify a host if you would like to edit data located on an alternate OSM server. The default host is api.openstreetmap.org."; ObjectID = "6GT-p2-rPO"; */
+"6GT-p2-rPO.footerTitle" = "Specify a host if you would like to edit data located on an alternate OSM server. The default host is api.openstreetmap.org.";
+
+/* Class = "UITableViewSection"; headerTitle = "OpenStreetMap Server"; ObjectID = "6GT-p2-rPO"; */
+"6GT-p2-rPO.headerTitle" = "OpenStreetMap Server";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "6Lj-wh-z9f"; */
+"6Lj-wh-z9f.text" = "Detail";
+
+/* Class = "UITableViewController"; title = "Point of Interest"; ObjectID = "6VA-gm-L0S"; */
+"6VA-gm-L0S.title" = "Point of Interest";
+
+/* Class = "UINavigationItem"; title = "Upload"; ObjectID = "7Ua-cx-BHI"; */
+"7Ua-cx-BHI.title" = "Upload";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "7cc-E7-pzw"; */
+"7cc-E7-pzw.text" = "Name";
+
+/* Class = "UILabel"; text = "Rail Features"; ObjectID = "7df-49-qTa"; */
+"7df-49-qTa.text" = "Rail Features";
+
+/* Class = "UITextField"; placeholder = "-1..3,7"; ObjectID = "7ga-PZ-MfV"; */
+"7ga-PZ-MfV.placeholder" = "-1..3,7";
+
+/* Class = "UINavigationItem"; title = "Custom Aerial"; ObjectID = "8HT-Bc-Q2z"; */
+"8HT-Bc-Q2z.title" = "Custom Aerial";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "8Nt-xf-x5Q"; */
+"8Nt-xf-x5Q.text" = "Title";
+
+/* Class = "UIButton"; normalTitle = "Details"; ObjectID = "8S7-Kw-QHF"; */
+"8S7-Kw-QHF.normalTitle" = "Details";
+
+/* Class = "UITableViewSection"; headerTitle = "Overlays"; ObjectID = "8es-4f-sj3"; */
+"8es-4f-sj3.headerTitle" = "Overlays";
+
+/* Class = "UILabel"; text = "username - action"; ObjectID = "9G2-Gl-CeP"; */
+"9G2-Gl-CeP.text" = "username - action";
+
+/* Class = "UILabel"; text = "Mapnik only"; ObjectID = "9L3-JO-Whj"; */
+"9L3-JO-Whj.text" = "Mapnik only";
+
+/* Class = "UITextField"; placeholder = "Yes"; ObjectID = "9Nw-ha-JK5"; */
+"9Nw-ha-JK5.placeholder" = "Yes";
+
+/* Class = "UILabel"; text = "Clear GPX Tracks"; ObjectID = "9aN-lr-L6e"; */
+"9aN-lr-L6e.text" = "Clear GPX Tracks";
+
+/* Class = "UILabel"; text = "New comment:"; ObjectID = "9hH-Ja-fKn"; */
+"9hH-Ja-fKn.text" = "New comment:";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "9pN-dp-rZU"; */
+"9pN-dp-rZU.text" = "Detail";
+
+/* Class = "UILabel"; text = "66.6 FPS"; ObjectID = "9t5-wq-j1u"; */
+"9t5-wq-j1u.text" = "66.6 FPS";
+
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "AHZ-L8-yUA"; */
+"AHZ-L8-yUA.title" = "Settings";
+
+/* Class = "UILabel"; text = "Aerial Tiles"; ObjectID = "AVI-04-hFN"; */
+"AVI-04-hFN.text" = "Aerial Tiles";
+
+/* Class = "UITextField"; placeholder = "dog"; ObjectID = "Ak4-ru-E4V"; */
+"Ak4-ru-E4V.placeholder" = "dog";
+
+/* Class = "UILabel"; text = "Changes:"; ObjectID = "ArV-4u-j7D"; */
+"ArV-4u-j7D.text" = "Changes:";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet,"; ObjectID = "BAY-7z-hwv"; */
+"BAY-7z-hwv.text" = "Lorem ipsum dolor sit er elit lamet,";
+
+/* Class = "UITextView"; text = "Copyright © 2012-2015 Bryce Cogswell. \nAll rights reserved.\n\nOpenStreetMap data is licensed under the Open Data Commons Open Database License (ODbL):\nhttp://www.openstreetmap.com/copyright\n\nBing aerial imagery copyright Microsoft and its suppliers:\nhttp://www.microsoft.com/maps/product/terms.html, http://www.microsoft.com/maps/assets/docs/terms.aspx\n\nMapbox aerial imagery copyright Mapbox and its suppliers: http://www.mapbox.com/tos\n\nXML parsing courtesy of Robbie Hanson's KissXML:\nhttps://github.com/robbiehanson/KissXML\n\nMap icons by SJJB:\nhttp://www.sjjb.co.uk/mapicons\n\nOther icons by Glyphish:\nhttp://glyphish.com\n"; ObjectID = "BHr-ta-k6F"; */
+"BHr-ta-k6F.text" = "Copyright © 2012-2015 Bryce Cogswell. \nAll rights reserved.\n\nOpenStreetMap data is licensed under the Open Data Commons Open Database License (ODbL):\nhttp://www.openstreetmap.com/copyright\n\nBing aerial imagery copyright Microsoft and its suppliers:\nhttp://www.microsoft.com/maps/product/terms.html, http://www.microsoft.com/maps/assets/docs/terms.aspx\n\nMapbox aerial imagery copyright Mapbox and its suppliers: http://www.mapbox.com/tos\n\nXML parsing courtesy of Robbie Hanson's KissXML:\nhttps://github.com/robbiehanson/KissXML\n\nMap icons by SJJB:\nhttp://www.sjjb.co.uk/mapicons\n\nOther icons by Glyphish:\nhttp://glyphish.com\n";
+
+/* Class = "UINavigationItem"; title = "Search for Location"; ObjectID = "Bfb-FI-LQK"; */
+"Bfb-FI-LQK.title" = "Search for Location";
+
+/* Class = "UILabel"; text = "Add New"; ObjectID = "Bnh-U0-D7i"; */
+"Bnh-U0-D7i.text" = "Add New";
+
+/* Class = "UILabel"; text = "Clear Aerial Tiles"; ObjectID = "Bx1-9n-4r3"; */
+"Bx1-9n-4r3.text" = "Clear Aerial Tiles";
+
+/* Class = "UILabel"; text = "Value 8"; ObjectID = "CXe-gQ-Zda"; */
+"CXe-gQ-Zda.text" = "Value 8";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "Ceq-eN-yV5"; */
+"Ceq-eN-yV5.title" = "Item";
+
+/* Class = "UIButton"; normalTitle = "Register new account"; ObjectID = "DY5-Ls-XZ1"; */
+"DY5-Ls-XZ1.normalTitle" = "Register new account";
+
+/* Class = "UITableViewSection"; footerTitle = "The preset will be available when editing objects matching this key/value combination. Leave either blank for wildcard."; ObjectID = "Dfv-TT-J6i"; */
+"Dfv-TT-J6i.footerTitle" = "The preset will be available when editing objects matching this key/value combination. Leave either blank for wildcard.";
+
+/* Class = "UITableViewSection"; headerTitle = "Applies To"; ObjectID = "Dfv-TT-J6i"; */
+"Dfv-TT-J6i.headerTitle" = "Applies To";
+
+/* Class = "UILabel"; text = "Detail detail detail detail detail"; ObjectID = "DiU-tt-U7H"; */
+"DiU-tt-U7H.text" = "Detail detail detail detail detail";
+
+/* Class = "UILabel"; text = "Collect in background:"; ObjectID = "DmO-dW-3Fh"; */
+"DmO-dW-3Fh.text" = "Collect in background:";
+
+/* Class = "UILabel"; text = "12:00:00"; ObjectID = "EHa-L5-Hcz"; */
+"EHa-L5-Hcz.text" = "12:00:00";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "Eda-AV-Gth"; */
+"Eda-AV-Gth.title" = "Back";
+
+/* Class = "UILabel"; text = "Key"; ObjectID = "Eou-a6-V4g"; */
+"Eou-a6-V4g.text" = "Key";
+
+/* Class = "UILabel"; text = "Value 3"; ObjectID = "Fcv-4Q-gpE"; */
+"Fcv-4Q-gpE.text" = "Value 3";
+
+/* Class = "UITextField"; placeholder = "designated"; ObjectID = "Fe2-dc-zgA"; */
+"Fe2-dc-zgA.placeholder" = "designated";
+
+/* Class = "UIButton"; normalTitle = "Center"; ObjectID = "Fo4-Nq-pAz"; */
+"Fo4-Nq-pAz.normalTitle" = "Center";
+
+/* Class = "UITableViewController"; title = "Custom Tags"; ObjectID = "G5R-oP-lp3"; */
+"G5R-oP-lp3.title" = "Custom Tags";
+
+/* Class = "UINavigationItem"; title = "Custom Presets"; ObjectID = "GIO-W7-q5U"; */
+"GIO-W7-q5U.title" = "Custom Presets";
+
+/* Class = "UINavigationItem"; title = "OSM Server"; ObjectID = "Gxc-44-SzR"; */
+"Gxc-44-SzR.title" = "OSM Server";
+
+/* Class = "UINavigationItem"; title = "QA Poole No Name Tiles"; ObjectID = "H3p-Ta-kIy"; */
+"H3p-Ta-kIy.title" = "QA Poole No Name Tiles";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "HNj-kK-OCP"; */
+"HNj-kK-OCP.text" = "Title";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "HeZ-95-3K1"; */
+"HeZ-95-3K1.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "Hgu-iP-FnG"; */
+"Hgu-iP-FnG.title" = "Back";
+
+/* Class = "UILabel"; text = "Power Features"; ObjectID = "Idx-2G-6F7"; */
+"Idx-2G-6F7.text" = "Power Features";
+
+/* Class = "UILabel"; text = "Value 1"; ObjectID = "JAT-qD-dTS"; */
+"JAT-qD-dTS.text" = "Value 1";
+
+/* Class = "UILabel"; text = "Title title title title"; ObjectID = "JbA-pC-plJ"; */
+"JbA-pC-plJ.text" = "Title title title title";
+
+/* Class = "UINavigationItem"; title = "POI Type"; ObjectID = "Jsm-mO-hgo"; */
+"Jsm-mO-hgo.title" = "POI Type";
+
+/* Class = "UILabel"; text = "Paths"; ObjectID = "Jz1-GP-Wbe"; */
+"Jz1-GP-Wbe.text" = "Paths";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "KIO-8j-QsO"; */
+"KIO-8j-QsO.text" = "Subtitle";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "KX3-hG-OyE"; */
+"KX3-hG-OyE.title" = "Back";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur pecu, sed do ut labore e  incididunt."; ObjectID = "LC1-f2-hU1"; */
+"LC1-f2-hU1.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur pecu, sed do ut labore e  incididunt.";
+
+/* Class = "UILabel"; text = "Food & Drink"; ObjectID = "LUc-68-Anl"; */
+"LUc-68-Anl.text" = "Food & Drink";
+
+/* Class = "UILabel"; text = "Details"; ObjectID = "LaB-Et-hHT"; */
+"LaB-Et-hHT.text" = "Details";
+
+/* Class = "UILabel"; text = "Enable Filters"; ObjectID = "LxX-tl-ZLH"; */
+"LxX-tl-ZLH.text" = "Enable Filters";
+
+/* Class = "UILabel"; text = "Editor with Aerial"; ObjectID = "MPq-PX-jf0"; */
+"MPq-PX-jf0.text" = "Editor with Aerial";
+
+/* Class = "UINavigationItem"; title = "Aerial Provider"; ObjectID = "MZF-am-tCM"; */
+"MZF-am-tCM.title" = "Aerial Provider";
+
+/* Class = "UINavigationItem"; title = "Upload"; ObjectID = "Mdj-M0-0mZ"; */
+"Mdj-M0-0mZ.title" = "Upload";
+
+/* Class = "UILabel"; text = "GPX Tracks you record or download will be automatically deleted after:"; ObjectID = "MeQ-4N-FqC"; */
+"MeQ-4N-FqC.text" = "GPX Tracks you record or download will be automatically deleted after:";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "Mus-SG-1Sz"; */
+"Mus-SG-1Sz.text" = "Detail";
+
+/* Class = "UIButton"; normalTitle = "Add New"; ObjectID = "Mws-V4-WER"; */
+"Mws-V4-WER.normalTitle" = "Add New";
+
+/* Class = "UILabel"; text = "Zoom to Edit"; ObjectID = "N5Q-nV-TPG"; */
+"N5Q-nV-TPG.text" = "Zoom to Edit";
+
+/* Class = "UILabel"; text = "Notes and Fixmes"; ObjectID = "O0U-6M-7AT"; */
+"O0U-6M-7AT.text" = "Notes and Fixmes";
+
+/* Class = "UINavigationItem"; title = "Login"; ObjectID = "O6E-f1-A1k"; */
+"O6E-f1-A1k.title" = "Login";
+
+/* Class = "UIButton"; normalTitle = "Resolve"; ObjectID = "OJ0-aO-ri1"; */
+"OJ0-aO-ri1.normalTitle" = "Resolve";
+
+/* Class = "UINavigationItem"; title = "Custom Preset"; ObjectID = "OND-s7-I6f"; */
+"OND-s7-I6f.title" = "Custom Preset";
+
+/* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "OiJ-GU-gZ3"; */
+"OiJ-GU-gZ3.title" = "Cancel";
+
+/* Class = "UILabel"; text = "Landuse"; ObjectID = "Okg-2D-O6U"; */
+"Okg-2D-O6U.text" = "Landuse";
+
+/* Class = "UILabel"; text = "Type"; ObjectID = "P3A-5n-1Iq"; */
+"P3A-5n-1Iq.text" = "Type";
+
+/* Class = "UITextView"; text = "Various comments..."; ObjectID = "PHk-s9-onx"; */
+"PHk-s9-onx.text" = "Various comments...";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet,"; ObjectID = "Plh-7W-ceY"; */
+"Plh-7W-ceY.text" = "Lorem ipsum dolor sit er elit lamet,";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "Po2-4Z-i8t"; */
+"Po2-4Z-i8t.text" = "Subtitle";
+
+/* Class = "UITableViewSection"; headerTitle = "Preset Name"; ObjectID = "QDv-7w-nbx"; */
+"QDv-7w-nbx.headerTitle" = "Preset Name";
+
+/* Class = "UIButton"; normalTitle = "Set Height"; ObjectID = "QZK-2k-kEa"; */
+"QZK-2k-kEa.normalTitle" = "Set Height";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "QeZ-5t-GnS"; */
+"QeZ-5t-GnS.text" = "Detail";
+
+/* Class = "UILabel"; text = "Value 6"; ObjectID = "R0q-aM-ULf"; */
+"R0q-aM-ULf.text" = "Value 6";
+
+/* Class = "UITableViewSection"; headerTitle = "Interactions"; ObjectID = "RJU-Z2-QFh"; */
+"RJU-Z2-QFh.headerTitle" = "Interactions";
+
+/* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "Rfe-SO-p0w"; */
+"Rfe-SO-p0w.title" = "Cancel";
+
+/* Class = "UIButton"; normalTitle = "Mail"; ObjectID = "Rqu-ny-n3F"; */
+"Rqu-ny-n3F.normalTitle" = "Mail";
+
+/* Class = "UILabel"; text = "Service Roads"; ObjectID = "RxO-IV-UE7"; */
+"RxO-IV-UE7.text" = "Service Roads";
+
+/* Class = "UITableViewSection"; footerTitle = "Clear the OSM data cache if the application state becomes out of sync with the OSM server. This may occur if someone else changes data you are editing, or if one of your uploads fails midway through preventing you from uploading additional data. \n\nWarning: Clearing the OSM cache will cause you to lose any changes that have not yet been uploaded.\n\nClear the Mapnik or Overlay tile caches  to download the latest tiles that reflect changes you've previously submitted. Your changes may take up to 24 hours to be processed."; ObjectID = "SNa-W1-wga"; */
+"SNa-W1-wga.footerTitle" = "Clear the OSM data cache if the application state becomes out of sync with the OSM server. This may occur if someone else changes data you are editing, or if one of your uploads fails midway through preventing you from uploading additional data. \n\nWarning: Clearing the OSM cache will cause you to lose any changes that have not yet been uploaded.\n\nClear the Mapnik or Overlay tile caches  to download the latest tiles that reflect changes you've previously submitted. Your changes may take up to 24 hours to be processed.";
+
+/* Class = "UITableViewSection"; headerTitle = "Discard & Refresh"; ObjectID = "SNa-W1-wga"; */
+"SNa-W1-wga.headerTitle" = "Discard & Refresh";
+
+/* Class = "UIButton"; normalTitle = "Distance"; ObjectID = "SdH-uy-BuK"; */
+"SdH-uy-BuK.normalTitle" = "Distance";
+
+/* Class = "UILabel"; text = "Credits"; ObjectID = "TGa-tJ-nrC"; */
+"TGa-tJ-nrC.text" = "Credits";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "TK4-E8-1q7"; */
+"TK4-E8-1q7.text" = "Title";
+
+/* Class = "UILabel"; text = "Clear OSM Data"; ObjectID = "Tbo-ge-Amz"; */
+"Tbo-ge-Amz.text" = "Clear OSM Data";
+
+/* Class = "UILabel"; text = "Keep Right"; ObjectID = "Tgv-5E-Zs5"; */
+"Tgv-5E-Zs5.text" = "Keep Right";
+
+/* Class = "UITableViewSection"; footerTitle = "In order to upload changes to the map you need a user name and password registered at openstreetmap.org. "; ObjectID = "Tkc-bW-kNS"; */
+"Tkc-bW-kNS.footerTitle" = "In order to upload changes to the map you need a user name and password registered at openstreetmap.org. ";
+
+/* Class = "UITableViewSection"; headerTitle = "OpenStreetMap account"; ObjectID = "Tkc-bW-kNS"; */
+"Tkc-bW-kNS.headerTitle" = "OpenStreetMap account";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "UT3-uR-YpN"; */
+"UT3-uR-YpN.text" = "Subtitle";
+
+/* Class = "UITextField"; placeholder = "relation"; ObjectID = "Urd-9O-Mte"; */
+"Urd-9O-Mte.placeholder" = "relation";
+
+/* Class = "UILabel"; text = "Others"; ObjectID = "Uum-Wn-9CF"; */
+"Uum-Wn-9CF.text" = "Others";
+
+/* Class = "UINavigationItem"; title = "Nearby Mappers"; ObjectID = "VDO-HW-SLB"; */
+"VDO-HW-SLB.title" = "Nearby Mappers";
+
+/* Class = "UILabel"; text = "Enable Rotation"; ObjectID = "VUR-wT-knn"; */
+"VUR-wT-knn.text" = "Enable Rotation";
+
+/* Class = "UILabel"; text = "Wheelchair Access"; ObjectID = "Vli-Ct-Lpz"; */
+"Vli-Ct-Lpz.text" = "Wheelchair Access";
+
+/* Class = "UILabel"; text = "Value 10"; ObjectID = "Wim-Qa-dYQ"; */
+"Wim-Qa-dYQ.text" = "Value 10";
+
+/* Class = "UILabel"; text = "Delete tracks after:"; ObjectID = "WnI-tY-WWa"; */
+"WnI-tY-WWa.text" = "Delete tracks after:";
+
+/* Class = "UILabel"; text = "Value 7"; ObjectID = "WoH-od-iKL"; */
+"WoH-od-iKL.text" = "Value 7";
+
+/* Class = "UITextField"; placeholder = "tag"; ObjectID = "X1y-nK-nVJ"; */
+"X1y-nK-nVJ.placeholder" = "tag";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "X7U-Pa-WCn"; */
+"X7U-Pa-WCn.text" = "Subtitle";
+
+/* Class = "UILabel"; text = "Food & Drink"; ObjectID = "XBV-Ie-LDT"; */
+"XBV-Ie-LDT.text" = "Food & Drink";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "XHN-uF-r8g"; */
+"XHN-uF-r8g.text" = "Subtitle";
+
+/* Class = "UITextField"; placeholder = "username"; ObjectID = "YQ4-05-lQz"; */
+"YQ4-05-lQz.placeholder" = "username";
+
+/* Class = "UINavigationItem"; title = "GPX Tracks"; ObjectID = "Z8C-Ef-iJE"; */
+"Z8C-Ef-iJE.title" = "GPX Tracks";
+
+/* Class = "UILabel"; text = "Unnamed Roads"; ObjectID = "ZP1-qY-kXe"; */
+"ZP1-qY-kXe.text" = "Unnamed Roads";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "ZYn-TK-k7d"; */
+"ZYn-TK-k7d.text" = "Subtitle";
+
+/* Class = "UITextField"; placeholder = "ref"; ObjectID = "aCs-vS-YXj"; */
+"aCs-vS-YXj.placeholder" = "ref";
+
+/* Class = "UIBarButtonItem"; title = "Configure"; ObjectID = "aLi-Vs-z0k"; */
+"aLi-Vs-z0k.title" = "Configure";
+
+/* Class = "UITextView"; text = "Changeset comment goes here"; ObjectID = "ach-1A-88x"; */
+"ach-1A-88x.text" = "Changeset comment goes here";
+
+/* Class = "UILabel"; text = "Bug Reports & Suggestions"; ObjectID = "ags-Mx-c1q"; */
+"ags-Mx-c1q.text" = "Bug Reports & Suggestions";
+
+/* Class = "UITableViewSection"; footerTitle = "Go Map!! will automatically discard old data to optimize performance."; ObjectID = "bmY-Hw-jv6"; */
+"bmY-Hw-jv6.footerTitle" = "Go Map!! will automatically discard old data to optimize performance.";
+
+/* Class = "UITableViewSection"; headerTitle = "Cache Management"; ObjectID = "bmY-Hw-jv6"; */
+"bmY-Hw-jv6.headerTitle" = "Cache Management";
+
+/* Class = "UINavigationItem"; title = "Bing Maps"; ObjectID = "bp9-2D-wIC"; */
+"bp9-2D-wIC.title" = "Bing Maps";
+
+/* Class = "UIButton"; normalTitle = "Start"; ObjectID = "bt0-CH-HbH"; */
+"bt0-CH-HbH.normalTitle" = "Start";
+
+/* Class = "UINavigationItem"; title = "Web View"; ObjectID = "cBA-fl-u9F"; */
+"cBA-fl-u9F.title" = "Web View";
+
+/* Class = "UINavigationItem"; title = "All Tags"; ObjectID = "cN9-3h-H3l"; */
+"cN9-3h-H3l.title" = "All Tags";
+
+/* Class = "UITextField"; placeholder = "value"; ObjectID = "cP3-lR-lzM"; */
+"cP3-lR-lzM.placeholder" = "value";
+
+/* Class = "UITableViewSection"; headerTitle = "Preset Key"; ObjectID = "cTf-Rc-vqr"; */
+"cTf-Rc-vqr.headerTitle" = "Preset Key";
+
+/* Class = "UINavigationItem"; title = "Show Objects"; ObjectID = "cXC-ij-AMQ"; */
+"cXC-ij-AMQ.title" = "Show Objects";
+
+/* Class = "UILabel"; text = "Clear Locator Overlay Tiles"; ObjectID = "cfe-0O-z4y"; */
+"cfe-0O-z4y.text" = "Clear Locator Overlay Tiles";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "cpC-iE-1Dm"; */
+"cpC-iE-1Dm.text" = "Title";
+
+/* Class = "UITableViewSection"; headerTitle = "Friendly Name"; ObjectID = "cpv-m2-oDm"; */
+"cpv-m2-oDm.headerTitle" = "Friendly Name";
+
+/* Class = "UIBarButtonItem"; title = "Verify"; ObjectID = "ctb-pg-pM9"; */
+"ctb-pg-pM9.title" = "Verify";
+
+/* Class = "UILabel"; text = "Automatic"; ObjectID = "dIe-MC-t44"; */
+"dIe-MC-t44.text" = "Automatic";
+
+/* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "dci-gg-ddc"; */
+"dci-gg-ddc.title" = "Cancel";
+
+/* Class = "UILabel"; text = "Value 9"; ObjectID = "dsA-B6-s7R"; */
+"dsA-B6-s7R.text" = "Value 9";
+
+/* Class = "UITextField"; placeholder = "http://{switch:a,b,c}.tile.org/{z}/{x}/{y}.png\n "; ObjectID = "dzT-B4-za3"; */
+"dzT-B4-za3.placeholder" = "http://{switch:a,b,c}.tile.org/{z}/{x}/{y}.png\n ";
+
+/* Class = "UITextField"; placeholder = "password"; ObjectID = "e7I-rE-dAW"; */
+"e7I-rE-dAW.placeholder" = "password";
+
+/* Class = "UITextField"; placeholder = "Dogs Allowed"; ObjectID = "eG3-Xz-Nnp"; */
+"eG3-Xz-Nnp.placeholder" = "Dogs Allowed";
+
+/* Class = "UILabel"; text = "Editor"; ObjectID = "eN6-SZ-99I"; */
+"eN6-SZ-99I.text" = "Editor";
+
+/* Class = "UIButton"; normalTitle = "Bing"; ObjectID = "eac-Db-EaW"; */
+"eac-Db-EaW.normalTitle" = "Bing";
+
+/* Class = "UITabBarController"; title = "Attributes"; ObjectID = "f5t-25-IXF"; */
+"f5t-25-IXF.title" = "Attributes";
+
+/* Class = "UITableViewSection"; headerTitle = "Credentials"; ObjectID = "fbD-Hr-HNI"; */
+"fbD-Hr-HNI.headerTitle" = "Credentials";
+
+/* Class = "UIBarButtonItem"; title = "Commit"; ObjectID = "feW-AK-msn"; */
+"feW-AK-msn.title" = "Commit";
+
+/* Class = "UITextField"; placeholder = "clean"; ObjectID = "foC-aN-GtH"; */
+"foC-aN-GtH.placeholder" = "clean";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "gdL-Os-R6R"; */
+"gdL-Os-R6R.text" = "Points";
+
+/* Class = "UIBarButtonItem"; title = "Commit"; ObjectID = "gdu-Sf-XrE"; */
+"gdu-Sf-XrE.title" = "Commit";
+
+/* Class = "UILabel"; text = "OSM Server"; ObjectID = "gec-8l-k4H"; */
+"gec-8l-k4H.text" = "OSM Server";
+
+/* Class = "UITableViewSection"; headerTitle = "Advanced"; ObjectID = "gh3-sb-yuZ"; */
+"gh3-sb-yuZ.headerTitle" = "Advanced";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "gre-3S-iPA"; */
+"gre-3S-iPA.text" = "Detail";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "h1O-06-ApF"; */
+"h1O-06-ApF.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Help"; ObjectID = "hKF-nO-JpA"; */
+"hKF-nO-JpA.title" = "Help";
+
+/* Class = "UINavigationItem"; title = "Attributes"; ObjectID = "hKU-EH-qxp"; */
+"hKU-EH-qxp.title" = "Attributes";
+
+/* Class = "UILabel"; text = "OpenStreetMap GPS Traces"; ObjectID = "hMJ-yP-XJe"; */
+"hMJ-yP-XJe.text" = "OpenStreetMap GPS Traces";
+
+/* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "hcE-yO-3eH"; */
+"hcE-yO-3eH.normalTitle" = "Edit";
+
+/* Class = "UITextField"; text = "value"; ObjectID = "hfr-Mf-ZHv"; */
+"hfr-Mf-ZHv.text" = "value";
+
+/* Class = "UILabel"; text = "Traffic Roads"; ObjectID = "hkr-kO-jbt"; */
+"hkr-kO-jbt.text" = "Traffic Roads";
+
+/* Class = "UITextView"; text = "Simon Poole Map Data © OpenStreetMap contributors\n"; ObjectID = "hsp-Xj-TU6"; */
+"hsp-Xj-TU6.text" = "Simon Poole Map Data © OpenStreetMap contributors\n";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "hvz-TE-9J7"; */
+"hvz-TE-9J7.text" = "Subtitle";
+
+/* Class = "UINavigationItem"; title = "Language"; ObjectID = "ib9-wt-IzD"; */
+"ib9-wt-IzD.title" = "Language";
+
+/* Class = "UILabel"; text = "Changeset"; ObjectID = "ijx-N9-1eO"; */
+"ijx-N9-1eO.text" = "Changeset";
+
+/* Class = "UILabel"; text = "Changeset comment:"; ObjectID = "ikj-u9-9Bn"; */
+"ikj-u9-9Bn.text" = "Changeset comment:";
+
+/* Class = "UILabel"; text = "Nearby Mappers"; ObjectID = "jcn-Lx-tj3"; */
+"jcn-Lx-tj3.text" = "Nearby Mappers";
+
+/* Class = "UIButton"; normalTitle = "Height"; ObjectID = "juy-LX-vDs"; */
+"juy-LX-vDs.normalTitle" = "Height";
+
+/* Class = "UITableViewSection"; footerTitle = "The possible values for the preset"; ObjectID = "jv1-BF-p2a"; */
+"jv1-BF-p2a.footerTitle" = "The possible values for the preset";
+
+/* Class = "UITableViewSection"; headerTitle = "Preset values"; ObjectID = "jv1-BF-p2a"; */
+"jv1-BF-p2a.headerTitle" = "Preset values";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "k0y-gf-6DY"; */
+"k0y-gf-6DY.text" = "Password";
+
+/* Class = "UILabel"; text = "Hostname"; ObjectID = "kDx-6x-qqY"; */
+"kDx-6x-qqY.text" = "Hostname";
+
+/* Class = "UITextField"; placeholder = "leisure "; ObjectID = "kPA-ky-U48"; */
+"kPA-ky-U48.placeholder" = "leisure ";
+
+/* Class = "UILabel"; text = "Clear GPS Overlay Tiles"; ObjectID = "klC-Oh-Oyd"; */
+"klC-Oh-Oyd.text" = "Clear GPS Overlay Tiles";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "kt1-K7-kcu"; */
+"kt1-K7-kcu.title" = "Back";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "l5O-tO-QFr"; */
+"l5O-tO-QFr.normalTitle" = "Cancel";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "l7S-YL-RKK"; */
+"l7S-YL-RKK.text" = "Subtitle";
+
+/* Class = "UITabBarItem"; title = "Common Tags"; ObjectID = "lPv-s6-uEz"; */
+"lPv-s6-uEz.title" = "Common Tags";
+
+/* Class = "UILabel"; text = "Value 5"; ObjectID = "li7-oV-pgT"; */
+"li7-oV-pgT.text" = "Value 5";
+
+/* Class = "UILabel"; text = "Past/Future"; ObjectID = "lu0-kr-5Cc"; */
+"lu0-kr-5Cc.text" = "Past/Future";
+
+/* Class = "UILabel"; text = "Enable 3-D Effects"; ObjectID = "luT-Tw-T3x"; */
+"luT-Tw-T3x.text" = "Enable 3-D Effects";
+
+/* Class = "UITableViewSection"; headerTitle = "Background"; ObjectID = "lwG-AE-nIZ"; */
+"lwG-AE-nIZ.headerTitle" = "Background";
+
+/* Class = "UINavigationItem"; title = "Prepare for Offline"; ObjectID = "m7D-wn-3MP"; */
+"m7D-wn-3MP.title" = "Prepare for Offline";
+
+/* Class = "UINavigationItem"; title = "Common Tags"; ObjectID = "mAb-DX-pqb"; */
+"mAb-DX-pqb.title" = "Common Tags";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "mcN-gM-s7u"; */
+"mcN-gM-s7u.text" = "Name";
+
+/* Class = "UISegmentedControl"; meL-dK-8Hk.segmentTitles[0] = "First"; ObjectID = "meL-dK-8Hk"; */
+"meL-dK-8Hk.segmentTitles[0]" = "First";
+
+/* Class = "UISegmentedControl"; meL-dK-8Hk.segmentTitles[1] = "Second"; ObjectID = "meL-dK-8Hk"; */
+"meL-dK-8Hk.segmentTitles[1]" = "Second";
+
+/* Class = "UITableViewSection"; headerTitle = "Miscellaneous"; ObjectID = "nIn-2k-PYG"; */
+"nIn-2k-PYG.headerTitle" = "Miscellaneous";
+
+/* Class = "UILabel"; text = "Value 2"; ObjectID = "nKt-LG-cSw"; */
+"nKt-LG-cSw.text" = "Value 2";
+
+/* Class = "UILabel"; text = "Value 4"; ObjectID = "ng7-T9-SJ6"; */
+"ng7-T9-SJ6.text" = "Value 4";
+
+/* Class = "UILabel"; text = "Value 11"; ObjectID = "o63-qY-4vl"; */
+"o63-qY-4vl.text" = "Value 11";
+
+/* Class = "UITextField"; placeholder = "leashed"; ObjectID = "oC6-w7-cwN"; */
+"oC6-w7-cwN.placeholder" = "leashed";
+
+/* Class = "UINavigationItem"; title = "Configure GPX Tracks"; ObjectID = "oSD-0y-Vt0"; */
+"oSD-0y-Vt0.title" = "Configure GPX Tracks";
+
+/* Class = "UITextField"; placeholder = "park"; ObjectID = "okh-JP-aKZ"; */
+"okh-JP-aKZ.placeholder" = "park";
+
+/* Class = "UILabel"; text = "Language"; ObjectID = "osk-Kq-gDX"; */
+"osk-Kq-gDX.text" = "Language";
+
+/* Class = "UIButton"; normalTitle = "Customize Presets"; ObjectID = "pHA-2B-6DC"; */
+"pHA-2B-6DC.normalTitle" = "Customize Presets";
+
+/* Class = "UILabel"; text = "Buildings"; ObjectID = "pQK-9y-t4z"; */
+"pQK-9y-t4z.text" = "Buildings";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "pR1-M8-pXH"; */
+"pR1-M8-pXH.title" = "Back";
+
+/* Class = "UITextField"; placeholder = "Restaurant"; ObjectID = "pxY-di-zg7"; */
+"pxY-di-zg7.placeholder" = "Restaurant";
+
+/* Class = "UINavigationItem"; title = "Note"; ObjectID = "qIZ-iS-gwF"; */
+"qIZ-iS-gwF.title" = "Note";
+
+/* Class = "UILabel"; text = "Clear Mapnik Tiles"; ObjectID = "qJB-zo-Tda"; */
+"qJB-zo-Tda.text" = "Clear Mapnik Tiles";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "qP9-Sc-sc4"; */
+"qP9-Sc-sc4.text" = "Label";
+
+/* Class = "UILabel"; text = "Boundaries"; ObjectID = "qdV-Je-jXT"; */
+"qdV-Je-jXT.text" = "Boundaries";
+
+/* Class = "UILabel"; text = "Turn Restrictions"; ObjectID = "r6a-cT-Ufa"; */
+"r6a-cT-Ufa.text" = "Turn Restrictions";
+
+/* Class = "UILabel"; text = "Prepare for Offline"; ObjectID = "rfX-TP-V0l"; */
+"rfX-TP-V0l.text" = "Prepare for Offline";
+
+/* Class = "UITextField"; placeholder = "role"; ObjectID = "sVp-1S-TjJ"; */
+"sVp-1S-TjJ.placeholder" = "role";
+
+/* Class = "UITableViewSection"; headerTitle = "Filter Objects"; ObjectID = "scg-Po-M3L"; */
+"scg-Po-M3L.headerTitle" = "Filter Objects";
+
+/* Class = "UIButton"; normalTitle = "Start"; ObjectID = "snH-kp-6ib"; */
+"snH-kp-6ib.normalTitle" = "Start";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "stf-JU-iga"; */
+"stf-JU-iga.text" = "Title";
+
+/* Class = "UILabel"; text = "URL"; ObjectID = "swu-t3-p5w"; */
+"swu-t3-p5w.text" = "URL";
+
+/* Class = "UILabel"; text = "2014-06-17 17:54 UTC"; ObjectID = "tOO-VD-MeJ"; */
+"tOO-VD-MeJ.text" = "2014-06-17 17:54 UTC";
+
+/* Class = "UILabel"; text = "Payment"; ObjectID = "tPF-m9-RtO"; */
+"tPF-m9-RtO.text" = "Payment";
+
+/* Class = "UINavigationItem"; title = "Clear Cache"; ObjectID = "tS9-CP-pqu"; */
+"tS9-CP-pqu.title" = "Clear Cache";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "tU9-Ml-4ko"; */
+"tU9-Ml-4ko.title" = "Back";
+
+/* Class = "UILabel"; text = "Key"; ObjectID = "teB-9L-Nrf"; */
+"teB-9L-Nrf.text" = "Key";
+
+/* Class = "UILabel"; text = "Water Features"; ObjectID = "twn-Ve-8vl"; */
+"twn-Ve-8vl.text" = "Water Features";
+
+/* Class = "UILabel"; text = "Aerial only"; ObjectID = "uOd-BB-zEq"; */
+"uOd-BB-zEq.text" = "Aerial only";
+
+/* Class = "UITextField"; placeholder = "21"; ObjectID = "uQ3-vb-l3H"; */
+"uQ3-vb-l3H.placeholder" = "21";
+
+/* Class = "UILabel"; text = "Building Level"; ObjectID = "uZo-P0-sR7"; */
+"uZo-P0-sR7.text" = "Building Level";
+
+/* Class = "UINavigationItem"; title = "Presets"; ObjectID = "v1b-PG-XxE"; */
+"v1b-PG-XxE.title" = "Presets";
+
+/* Class = "UILabel"; text = "12/22/20, 7:55 PM"; ObjectID = "v6h-g5-fka"; */
+"v6h-g5-fka.text" = "12/22/20, 7:55 PM";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "vRO-Aj-Sdr"; */
+"vRO-Aj-Sdr.text" = "Title";
+
+/* Class = "UILabel"; text = "Max Zoom"; ObjectID = "voF-Yf-33h"; */
+"voF-Yf-33h.text" = "Max Zoom";
+
+/* Class = "UITextField"; placeholder = "yes"; ObjectID = "vpk-jC-yxl"; */
+"vpk-jC-yxl.placeholder" = "yes";
+
+/* Class = "UITextField"; placeholder = "Bing aerial"; ObjectID = "w75-Lj-3jF"; */
+"w75-Lj-3jF.placeholder" = "Bing aerial";
+
+/* Class = "UILabel"; text = "Value 12"; ObjectID = "wFE-f1-sQa"; */
+"wFE-f1-sQa.text" = "Value 12";
+
+/* Class = "UITableViewSection"; headerTitle = "Reset"; ObjectID = "wev-ax-u4C"; */
+"wev-ax-u4C.headerTitle" = "Reset";
+
+/* Class = "UISearchBar"; placeholder = "Niagara Falls"; ObjectID = "xw9-Ro-Fai"; */
+"xw9-Ro-Fai.placeholder" = "Niagara Falls";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "yue-km-52a"; */
+"yue-km-52a.text" = "Name";
+
+/* Class = "UILabel"; text = "Value"; ObjectID = "z19-cc-gHZ"; */
+"z19-cc-gHZ.text" = "Value";
+
+/* Class = "UITableViewSection"; headerTitle = "Template URL of the tile server"; ObjectID = "zD6-m4-1PD"; */
+"zD6-m4-1PD.headerTitle" = "Template URL of the tile server";
+
+/* Class = "UIButton"; normalTitle = "Add New"; ObjectID = "zI2-YM-qbl"; */
+"zI2-YM-qbl.normalTitle" = "Add New";
+
+/* Class = "UISegmentedControl"; zrW-uc-hfQ.segmentTitles[0] = "Tags"; ObjectID = "zrW-uc-hfQ"; */
+"zrW-uc-hfQ.segmentTitles[0]" = "Tags";
+
+/* Class = "UISegmentedControl"; zrW-uc-hfQ.segmentTitles[1] = "Delete"; ObjectID = "zrW-uc-hfQ"; */
+"zrW-uc-hfQ.segmentTitles[1]" = "Delete";
+
+/* Class = "UISegmentedControl"; zrW-uc-hfQ.segmentTitles[2] = "More..."; ObjectID = "zrW-uc-hfQ"; */
+"zrW-uc-hfQ.segmentTitles[2]" = "More...";

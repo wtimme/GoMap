@@ -1075,6 +1075,9 @@
 		02F9A4541BC8348C0013BFBD /* OSM-Logo256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OSM-Logo256.png"; sourceTree = "<group>"; };
 		02FFCE0916A7360B001A5B8A /* NSMutableArray+PartialSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+PartialSort.h"; path = "../Shared/NSMutableArray+PartialSort.h"; sourceTree = "<group>"; };
 		02FFCE0A16A7360B001A5B8A /* NSMutableArray+PartialSort.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "NSMutableArray+PartialSort.mm"; path = "../Shared/NSMutableArray+PartialSort.mm"; sourceTree = "<group>"; };
+		640CF200216C042600CB7A2E /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
+		640CF201216C042600CB7A2E /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		640CF202216C042800CB7A2E /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1840,6 +1843,7 @@
 				en,
 				Base,
 				"zh-Hant",
+				de,
 			);
 			mainGroup = 02ACBA2416713CCB00BB4414;
 			productRefGroup = 02ACBA3016713CCB00BB4414 /* Products */;
@@ -2348,6 +2352,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				02ACBA3D16713CCB00BB4414 /* en */,
+				640CF202216C042800CB7A2E /* de */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -2356,6 +2361,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				02E8437919B4DD730044AC1D /* Base */,
+				640CF200216C042600CB7A2E /* de */,
 			);
 			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
@@ -2364,6 +2370,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				02E8438219B4DF960044AC1D /* Base */,
+				640CF201216C042600CB7A2E /* de */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
