@@ -47,10 +47,10 @@
 			[mail addAttachmentData:self.gpxTrack.gpxXmlData mimeType:@"application/gpx+xml" fileName:[NSString stringWithFormat:@"%@.gpx", self.gpxTrack.creationDate]];
 			[self.tableView presentViewController:mail animated:YES completion:nil];
 		} else {
-			UIAlertController * error = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Cannot compose message",nil)
-																			message:NSLocalizedString(@"Mail delivery is not available on this device",nil)
+			UIAlertController * error = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"sending_email_not_available_alert_title",nil)
+																			message:NSLocalizedString(@"cannot_send_mail_alert_message",nil)
 																	 preferredStyle:UIAlertControllerStyleAlert];
-			[error addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel",nil) style:UIAlertActionStyleCancel handler:nil]];
+			[error addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"generic_ok",nil) style:UIAlertActionStyleCancel handler:nil]];
 			[self.tableView presentViewController:error animated:YES completion:nil];
 		}
 	}]];

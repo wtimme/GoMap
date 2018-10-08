@@ -206,10 +206,10 @@
 		[mail addAttachmentData:[xml dataUsingEncoding:NSUTF8StringEncoding] mimeType:@"application/xml" fileName:@"osmChange.osc"];
 		[self presentViewController:mail animated:YES completion:nil];
 	} else {
-		UIAlertController * error = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Cannot compose message",nil)
-																		message:NSLocalizedString(@"Mail delivery is not available on this device",nil)
+		UIAlertController * error = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"cannot_send_mail_alert_title",nil)
+																		message:NSLocalizedString(@"cannot_send_mail_alert_message",nil)
 																 preferredStyle:UIAlertControllerStyleAlert];
-		[error addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"OK",nil) style:UIAlertActionStyleCancel handler:nil]];
+		[error addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"generic_ok",nil) style:UIAlertActionStyleCancel handler:nil]];
 		[self presentViewController:error animated:YES completion:nil];
 	}
 }

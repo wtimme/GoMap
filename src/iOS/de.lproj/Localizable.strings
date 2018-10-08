@@ -6,6 +6,7 @@
   Copyright (c) 2014 Bryce Cogswell. All rights reserved.
 */
 "generic_cancel" = "Abbrechen";
+"generic_ok" = "OK";
 
 "no_object_pushpin_title" = "(neues Objekt)";
 
@@ -80,3 +81,9 @@
 
 /* Title of the action sheet that presents additional actions ("More...") */
 "more_actions_action_sheet_title" = "Weitere Aktionen";
+
+/* Title of the dialog that explains that sending emails is not supported on the device */
+"cannot_send_mail_alert_title" = "E-Mail-Versand nicht verfügbar";
+
+/* Message of the dialog that explains that sending emails is not supported on the device */
+"cannot_send_mail_alert_message" = "Der Versand von E-Mails ist auf diesem Gerät nicht möglich.";

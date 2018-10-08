@@ -113,10 +113,10 @@
 			[mail setMessageBody:self.url isHTML:NO];
 			[self.navigationController presentViewController:mail animated:YES completion:nil];
 		} else {
-			UIAlertController * alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Cannot compose message",nil)
-																			message:NSLocalizedString(@"Mail delivery is not available on this device",nil)
+			UIAlertController * alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"cannot_send_mail_alert_title",nil)
+																			message:NSLocalizedString(@"cannot_send_mail_alert_message",nil)
 																	 preferredStyle:UIAlertControllerStyleAlert];
-			[sheet addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"OK",nil) style:UIAlertActionStyleCancel handler:nil]];
+			[sheet addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"generic_ok",nil) style:UIAlertActionStyleCancel handler:nil]];
 			[self.navigationController presentViewController:alert animated:YES completion:nil];
 		}
 	}]];
