@@ -6,3 +6,60 @@
   Copyright (c) 2014 Bryce Cogswell. All rights reserved.
 */
 "no_object_pushpin_title" = "(neues Objekt)";
+
+/* Title of the Split action */
+"split_action_title" = "Split";
+
+/* Title of the Make Rectangular action */
+"make_rectangular_action_title" = "Make Rectangular";
+
+/* Title of the Straighten action */
+"straighten_action_title" = "Straighten";
+
+/* Title of the Reverse action */
+"reverse_action_title" = "Reverse";
+
+/* Title of the Duplicate action */
+"duplicate_action_title" = "Duplicate";
+
+/* Title of the Rotate action */
+"rotate_action_title" = "Rotate";
+
+/* Title of the Make Circular action */
+"make_circular_action_title" = "Make Circular";
+
+/* Title of the Join action */
+"join_action_title" = "Join";
+
+/* Title of the Disconnect action */
+"disconnect_action_title" = "Disconnect";
+
+/* Title of the Copy Tags action */
+"copy_tags_action_title" = "Copy Tags";
+
+/* Title of the Paste action */
+"paste_action_title" = "Einfügen";
+
+/* Title of the action that displays the tag editor */
+"tags_action_title" = "Tags";
+
+/* Title of the action that lets the user add a new note */
+"add_note_action_title" = "Neue Notiz";
+
+/* Title of the Delete action */
+"delete_action_title" = "Löschen";
+
+/* Title of the More action */
+"more_action_title" = "Mehr...";
+
+/* Title of the Measure Height action */
+"measure_height_action_title" = "Measure Height";
+
+/* Title of the Restrict action */
+"restrict_action_title" = "Restrict";
+
+/* Title of the Turn Restrictions action */
+"turn_restrictions_action_title" = "Turn Restrictions";
+
+/* Title of the Create Relation action */
+"create_relation_action_title" = "Create Relation";

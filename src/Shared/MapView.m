@@ -2021,24 +2021,24 @@ typedef enum {
 NSString * ActionTitle( EDIT_ACTION action, BOOL abbrev )
 {
 	switch (action) {
-		case ACTION_SPLIT:			return NSLocalizedString(@"Split",nil);
-		case ACTION_RECTANGULARIZE:	return NSLocalizedString(@"Make Rectangular",nil);
-		case ACTION_STRAIGHTEN:		return NSLocalizedString(@"Straighten",nil);
-		case ACTION_REVERSE:		return NSLocalizedString(@"Reverse",nil);
-		case ACTION_DUPLICATE:		return NSLocalizedString(@"Duplicate",nil);
-		case ACTION_ROTATE:			return NSLocalizedString(@"Rotate",nil);
-		case ACTION_CIRCULARIZE:	return NSLocalizedString(@"Make Circular",nil);
-		case ACTION_JOIN:			return NSLocalizedString(@"Join",nil);
-		case ACTION_DISCONNECT:		return NSLocalizedString(@"Disconnect",nil);
-		case ACTION_COPYTAGS:		return NSLocalizedString(@"Copy Tags",nil);
-		case ACTION_PASTETAGS:		return NSLocalizedString(@"Paste",nil);
-		case ACTION_EDITTAGS:		return NSLocalizedString(@"Tags", nil);
-		case ACTION_ADDNOTE:		return NSLocalizedString(@"Add Note", nil);
-		case ACTION_DELETE:			return NSLocalizedString(@"Delete",nil);
-		case ACTION_MORE:			return NSLocalizedString(@"More...",nil);
-		case ACTION_HEIGHT:			return NSLocalizedString(@"Measure Height", nil);
-		case ACTION_RESTRICT:		return abbrev ? NSLocalizedString(@"Restrict", nil) : NSLocalizedString(@"Turn Restrictions", nil);
-		case ACTION_CREATE_RELATION:return NSLocalizedString(@"Create Relation", nil);
+		case ACTION_SPLIT:			return NSLocalizedString(@"split_action_title", nil);
+		case ACTION_RECTANGULARIZE:	return NSLocalizedString(@"make_rectangular_action_title", nil);
+		case ACTION_STRAIGHTEN:		return NSLocalizedString(@"straighten_action_title", nil);
+		case ACTION_REVERSE:		return NSLocalizedString(@"reverse_action_title", nil);
+		case ACTION_DUPLICATE:		return NSLocalizedString(@"duplicate_action_title", nil);
+		case ACTION_ROTATE:			return NSLocalizedString(@"rotate_action_title", nil);
+		case ACTION_CIRCULARIZE:	return NSLocalizedString(@"make_circular_action_title", nil);
+		case ACTION_JOIN:			return NSLocalizedString(@"join_action_title", nil);
+		case ACTION_DISCONNECT:		return NSLocalizedString(@"disconnect_action_title", nil);
+		case ACTION_COPYTAGS:		return NSLocalizedString(@"copy_tags_action_title", nil);
+		case ACTION_PASTETAGS:		return NSLocalizedString(@"paste_action_title", nil);
+		case ACTION_EDITTAGS:		return NSLocalizedString(@"tags_action_title", nil);
+		case ACTION_ADDNOTE:		return NSLocalizedString(@"add_note_action_title", nil);
+		case ACTION_DELETE:			return NSLocalizedString(@"delete_action_title", nil);
+		case ACTION_MORE:			return NSLocalizedString(@"more_action_title", nil);
+		case ACTION_HEIGHT:			return NSLocalizedString(@"measure_height_action_title", nil);
+		case ACTION_RESTRICT:		return abbrev ? NSLocalizedString(@"restrict_action_title", nil) : NSLocalizedString(@"turn_restrictions_action_title", nil);
+		case ACTION_CREATE_RELATION:return NSLocalizedString(@"create_relation_action_title", nil);
 	};
 	return nil;
 }
