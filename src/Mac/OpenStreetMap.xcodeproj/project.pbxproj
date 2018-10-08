@@ -418,7 +418,7 @@
 				ORGANIZATIONNAME = Bryce;
 				TargetAttributes = {
 					02FE3F5415F113CA00A6CFAE = {
-						DevelopmentTeam = MKTTC6734C;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -574,12 +574,15 @@
 				CODE_SIGN_ENTITLEMENTS = OpenStreetMap.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenStreetMap-Prefix.pch";
 				INFOPLIST_FILE = "Mac/OpenStreetMap-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -590,12 +593,15 @@
 				CODE_SIGN_ENTITLEMENTS = OpenStreetMap.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenStreetMap-Prefix.pch";
 				INFOPLIST_FILE = "Mac/OpenStreetMap-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
