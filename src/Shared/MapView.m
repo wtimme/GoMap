@@ -2545,7 +2545,7 @@ NSString * ActionTitle( EDIT_ACTION action, BOOL abbrev )
 	_confirmDrag = NO;
 
 	_pushpinView = [PushPinView new];
-	_pushpinView.text = object ? object.friendlyDescription : NSLocalizedString(@"(new object)",nil);
+	_pushpinView.text = object ? object.friendlyDescription : NSLocalizedString(@"no_object_pushpin_title", nil);
 	_pushpinView.layer.zPosition = Z_PUSHPIN;
 
 	_pushpinView.arrowPoint = point;
@@ -2773,7 +2773,7 @@ NSString * ActionTitle( EDIT_ACTION action, BOOL abbrev )
 - (void)refreshPushpinText
 {
 	NSString * text = _editorLayer.selectedPrimary.friendlyDescription;
-	text = text ?: @"(new object)";
+	text = text ?: NSLocalizedString(@"no_object_pushpin_title", nil);
 	_pushpinView.text = text;
 }
 
