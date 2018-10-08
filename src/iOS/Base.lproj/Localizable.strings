@@ -5,6 +5,9 @@
   Created by Bryce Cogswell on 9/1/14.
   Copyright (c) 2014 Bryce Cogswell. All rights reserved.
 */
+
+"generic_cancel" = "Cancel";
+
 "no_object_pushpin_title" = "(new object)";
 
 /* Title of the Split action */
@@ -75,3 +78,6 @@
 
 /* Title of the alert action that confirms and performs the move */
 "confirm_move_alert_confirm_action_title" = "Move";
+
+/* Title of the action sheet that presents additional actions ("More...") */
+"more_actions_action_sheet_title" = "Perform Action";

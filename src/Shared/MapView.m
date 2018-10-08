@@ -2120,14 +2120,14 @@ NSString * ActionTitle( EDIT_ACTION action, BOOL abbrev )
 		// nothing selected
 		return;
 	}
-	UIAlertController * actionSheet = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Perform Action",nil) message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+	UIAlertController * actionSheet = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"more_actions_action_sheet_title",nil) message:nil preferredStyle:UIAlertControllerStyleActionSheet];
 	for ( NSNumber * value in actionList ) {
 		NSString * title = ActionTitle( (EDIT_ACTION)value.integerValue, NO );
 		[actionSheet addAction:[UIAlertAction actionWithTitle:title style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
 			[self performEditAction:(EDIT_ACTION)value.integerValue];
 		}]];
 	}
-	[actionSheet addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel",nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {}]];
+	[actionSheet addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"generic_cancel",nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {}]];
 	[self.viewController presentViewController:actionSheet animated:YES completion:nil];
 
 	// compute location for action sheet to originate

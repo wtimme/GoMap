@@ -5,6 +5,8 @@
   Created by Bryce Cogswell on 9/1/14.
   Copyright (c) 2014 Bryce Cogswell. All rights reserved.
 */
+"generic_cancel" = "Abbrechen";
+
 "no_object_pushpin_title" = "(neues Objekt)";
 
 /* Title of the Split action */
@@ -20,7 +22,7 @@
 "reverse_action_title" = "Reverse";
 
 /* Title of the Duplicate action */
-"duplicate_action_title" = "Duplicate";
+"duplicate_action_title" = "Duplizieren";
 
 /* Title of the Rotate action */
 "rotate_action_title" = "Rotate";
@@ -35,7 +37,7 @@
 "disconnect_action_title" = "Disconnect";
 
 /* Title of the Copy Tags action */
-"copy_tags_action_title" = "Copy Tags";
+"copy_tags_action_title" = "Tags kopieren";
 
 /* Title of the Paste action */
 "paste_action_title" = "Einfügen";
@@ -53,7 +55,7 @@
 "more_action_title" = "Mehr...";
 
 /* Title of the Measure Height action */
-"measure_height_action_title" = "Measure Height";
+"measure_height_action_title" = "Höhe messen";
 
 /* Title of the Restrict action */
 "restrict_action_title" = "Restrict";
@@ -75,3 +77,6 @@
 
 /* Title of the alert action that confirms and performs the move */
 "confirm_move_alert_confirm_action_title" = "Verschieben";
+
+/* Title of the action sheet that presents additional actions ("More...") */
+"more_actions_action_sheet_title" = "Weitere Aktionen";
