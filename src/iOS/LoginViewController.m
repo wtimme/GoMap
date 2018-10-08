@@ -54,10 +54,10 @@
 
 			// warn that email addresses don't work
 			if ( [appDelegate.userName containsString:@"@"] ) {
-				errorMessage = NSLocalizedString(@"You must provide your OSM user name, not an email address.",nil);
+				errorMessage = NSLocalizedString(@"login_error_provide_username_instead_of_email",nil);
 			}
-			UIAlertController * alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Bad login",nil) message:errorMessage preferredStyle:UIAlertControllerStyleAlert];
-			[alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"OK",nil) style:UIAlertActionStyleCancel handler:nil]];
+			UIAlertController * alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"login_error_alert_title",nil) message:errorMessage preferredStyle:UIAlertControllerStyleAlert];
+			[alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"generic_ok",nil) style:UIAlertActionStyleCancel handler:nil]];
 			[self presentViewController:alert animated:YES completion:nil];
 		} else {
 			// verifying credentials may update the appDelegate values when we subsitute name for correct case:
@@ -66,8 +66,8 @@
 			[_username resignFirstResponder];
 			[_password resignFirstResponder];
 
-			UIAlertController * alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Login successful",nil) message:nil preferredStyle:UIAlertControllerStyleAlert];
-			[alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"OK",nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+			UIAlertController * alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"login_successful_alert_title",nil) message:nil preferredStyle:UIAlertControllerStyleAlert];
+			[alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"generic_ok",nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
 				[self.navigationController popToRootViewControllerAnimated:YES];
 			}]];
 			[self presentViewController:alert animated:YES completion:nil];

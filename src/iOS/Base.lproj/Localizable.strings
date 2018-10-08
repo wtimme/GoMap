@@ -88,3 +88,12 @@
 
 /* Message of the dialog that explains that sending emails is not supported on the device */
 "cannot_send_mail_alert_message" = "Mail delivery is not available on this device";
+
+/* Title of the dialog that indicates that the login failed */
+"login_error_alert_title" = "Bad login";
+
+/* Error message for when the login failed because the user entered their email address instead of the username */
+"login_error_provide_username_instead_of_email" = "You must provide your OSM user name, not an email address.";
+
+/* Title of the dialog that indicates that the login was successful */
+"login_successful_alert_title" = "Login successful";

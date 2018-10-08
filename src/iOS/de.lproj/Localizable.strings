@@ -87,3 +87,12 @@
 
 /* Message of the dialog that explains that sending emails is not supported on the device */
 "cannot_send_mail_alert_message" = "Der Versand von E-Mails ist auf diesem Gerät nicht möglich.";
+
+/* Title of the dialog that indicates that the login failed */
+"login_error_alert_title" = "Login fehlgeschlagen";
+
+/* Error message for when the login failed because the user entered their email address instead of the username */
+"login_error_provide_username_instead_of_email" = "Bitte gib anstatt deiner E-Mail-Adresse deinen Nutzernamen für OpenStreetMap ein.";
+
+/* Title of the dialog that indicates that the login was successful */
+"login_successful_alert_title" = "Login erfolgreich";
