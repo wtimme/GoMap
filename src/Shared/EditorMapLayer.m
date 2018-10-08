@@ -1277,7 +1277,10 @@ const static CGFloat Z_ARROWS			= Z_BASE + 11 * ZSCALE;
 		if ( icon == nil ) {
 			icon = tagInfo.icon;
 			if ( icon ) {
-				CGFloat uiScaling = [[UIScreen mainScreen] scale];
+                CGFloat uiScaling = 1;
+#if TARGET_OS_IPHONE
+                uiScaling = [[UIScreen mainScreen] scale];
+#endif
 				UIGraphicsBeginImageContext( CGSizeMake(uiScaling*MinIconSizeInPixels,uiScaling*MinIconSizeInPixels) );
 				[icon drawInRect:CGRectMake(0,0,uiScaling*MinIconSizeInPixels,uiScaling*MinIconSizeInPixels)];
 				icon = UIGraphicsGetImageFromCurrentImageContext();
@@ -2444,8 +2447,12 @@ static BOOL VisibleSizeLessStrict( OsmBaseObject * obj1, OsmBaseObject * obj2 )
 
 					// its an icon or a generic box
 				}
+                
+                CGFloat scale = 1;
+#if TARGET_OS_IPHONE
+                scale = [[UIScreen mainScreen] scale];
+#endif
 
-				CGFloat scale = [[UIScreen mainScreen] scale];
 				pt2.x = round(pt2.x * scale)/scale;
 				pt2.y = round(pt2.y * scale)/scale;
 				layer.position = CGPointFromOSMPoint(pt2);
