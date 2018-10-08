@@ -63,3 +63,15 @@
 
 /* Title of the Create Relation action */
 "create_relation_action_title" = "Create Relation";
+
+/* Title of the dialog that asks the user to confirm the move of an object */
+"confirm_move_alert_title" = "Soll dieses Objekt verschoben werden?";
+
+/* Message of the dialog that asks the user to confirm the move of an object */
+"confirm_move_alert_message" = "Durch das Verschieben ändert sich die Position.";
+
+/* Title of the alert action that performs an Undo operation on the moved object, reverting the move */
+"confirm_move_alert_cancel_action_title" = "Abbrechen";
+
+/* Title of the alert action that confirms and performs the move */
+"confirm_move_alert_confirm_action_title" = "Verschieben";

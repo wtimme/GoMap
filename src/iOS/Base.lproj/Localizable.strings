@@ -63,3 +63,15 @@
 
 /* Title of the Create Relation action */
 "create_relation_action_title" = "Create Relation";
+
+/* Title of the dialog that asks the user to confirm the move of an object */
+"confirm_move_alert_title" = "Confirm move";
+
+/* Message of the dialog that asks the user to confirm the move of an object */
+"confirm_move_alert_message" = "Move selected object?";
+
+/* Title of the alert action that performs an Undo operation on the moved object, reverting the move */
+"confirm_move_alert_cancel_action_title" = "Undo";
+
+/* Title of the alert action that confirms and performs the move */
+"confirm_move_alert_confirm_action_title" = "Move";

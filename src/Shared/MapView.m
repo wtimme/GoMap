@@ -2630,8 +2630,8 @@ NSString * ActionTitle( EDIT_ACTION action, BOOL abbrev )
 						if ( strongSelf->_confirmDrag ) {
 							strongSelf->_confirmDrag = NO;
 
-							UIAlertController *	alertMove = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Confirm move",nil) message:NSLocalizedString(@"Move selected object?",nil) preferredStyle:UIAlertControllerStyleAlert];
-							[alertMove addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Undo",nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {
+							UIAlertController *	alertMove = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"confirm_move_alert_title",nil) message:NSLocalizedString(@"confirm_move_alert_message",nil) preferredStyle:UIAlertControllerStyleAlert];
+							[alertMove addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"confirm_move_alert_cancel_action_title",nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {
 								// cancel move
 								[strongSelf->_editorLayer.mapData undo];
 								[strongSelf->_editorLayer.mapData removeMostRecentRedo];
@@ -2641,7 +2641,7 @@ NSString * ActionTitle( EDIT_ACTION action, BOOL abbrev )
 								[strongSelf removePin];
 								[strongSelf->_editorLayer setNeedsLayout];
 							}]];
-							[alertMove addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Move",nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+							[alertMove addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"confirm_move_alert_confirm_action_title",nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
 								// okay
 							}]];
 							[strongSelf.viewController presentViewController:alertMove animated:YES completion:nil];
