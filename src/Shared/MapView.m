@@ -1913,6 +1913,36 @@ static NSString * const DisplayLinkHeading	= @"Heading";
 
 #pragma mark Key presses
 
+/**
+ Offers the option to either merge tags or replace them with the copied tags.
+ @param sender nil
+ */
+-(IBAction)paste:(id)sender
+{
+    NSDictionary * copyPasteTags = [[NSUserDefaults standardUserDefaults] objectForKey:@"copyPasteTags"];
+    if ( copyPasteTags.count == 0 ) {
+		[self showAlert:NSLocalizedString(@"No tags to paste",nil) message:nil];
+		return;
+    }
+
+	if ( _editorLayer.selectedPrimary.tags.count > 0 ) {
+		NSString * question = [NSString stringWithFormat:@"Pasting %lu tag(s)", copyPasteTags.count];
+		UIAlertController * alertPaste = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Paste",nil) message:question preferredStyle:UIAlertControllerStyleAlert];
+		[alertPaste addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel",nil) style:UIAlertActionStyleCancel handler:nil]];
+		[alertPaste addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Merge Tags",nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * alertAction) {
+			[_editorLayer mergeTags:_editorLayer.selectedPrimary];
+			[self refreshPushpinText];
+		}]];
+		[alertPaste addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Replace Tags",nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * alertAction) {
+			[_editorLayer replaceTags:_editorLayer.selectedPrimary];
+			[self refreshPushpinText];
+		}]];
+		[self.viewController presentViewController:alertPaste animated:YES completion:nil];
+	} else {
+		[_editorLayer replaceTags:_editorLayer.selectedPrimary];
+		[self refreshPushpinText];
+	}
+}
 
 -(IBAction)delete:(id)sender
 {
@@ -2015,7 +2045,7 @@ typedef enum {
 	ACTION_COPYTAGS,
 	ACTION_PASTETAGS,
 	ACTION_RESTRICT,
-	ACTION_CREATE_RELATION,
+	ACTION_CREATE_RELATION
 } EDIT_ACTION;
 
 NSString * ActionTitle( EDIT_ACTION action, BOOL abbrev )
@@ -2080,12 +2110,13 @@ NSString * ActionTitle( EDIT_ACTION action, BOOL abbrev )
 		if ( _editorLayer.selectedNode ) {
 			// node in way
 			NSArray * parentWays = [_editorLayer.mapData waysContainingNode:_editorLayer.selectedNode];
-			BOOL disconnect		= parentWays.count > 1 || _editorLayer.selectedNode.hasInterestingTags;
+            BOOL disconnect		= parentWays.count > 1 || _editorLayer.selectedNode.hasInterestingTags;
 			BOOL split 			= _editorLayer.selectedWay.isClosed || (_editorLayer.selectedNode != _editorLayer.selectedWay.nodes[0] && _editorLayer.selectedNode != _editorLayer.selectedWay.nodes.lastObject);
 			BOOL join 			= parentWays.count > 1;
 			BOOL restriction	= _enableTurnRestriction && _editorLayer.selectedWay.tags[@"highway"] && parentWays.count > 1;
 			
-			NSMutableArray * a = [NSMutableArray arrayWithObject:@(ACTION_COPYTAGS)];
+			NSMutableArray * a = [NSMutableArray arrayWithObjects:@(ACTION_COPYTAGS), nil];
+            
 			if ( disconnect )
 				[a addObject:@(ACTION_DISCONNECT)];
 			if ( split )
@@ -2114,7 +2145,7 @@ NSString * ActionTitle( EDIT_ACTION action, BOOL abbrev )
 		if ( _editorLayer.selectedRelation.isMultipolygon ) {
 			actionList = @[ @(ACTION_COPYTAGS), @(ACTION_ROTATE), @(ACTION_DUPLICATE) ];
 		} else {
-			actionList = @[ @(ACTION_COPYTAGS) ];
+			actionList = @[ @(ACTION_COPYTAGS), @(ACTION_PASTETAGS) ];
 		}
 	} else {
 		// nothing selected
@@ -2207,8 +2238,7 @@ NSString * ActionTitle( EDIT_ACTION action, BOOL abbrev )
 				_editorLayer.selectedNode = nil;
 				[self refreshPushpinText];
 			}
-			if ( ! [_editorLayer pasteTags:_editorLayer.selectedPrimary] )
-				error = NSLocalizedString(@"No tags to paste",nil);
+            [self paste:nil];
 			break;
 		case ACTION_DUPLICATE:
 			{
