@@ -1631,7 +1631,7 @@ const static CGFloat Z_ARROWS			= Z_BASE + 11 * ZSCALE;
 - (NSArray<CALayer *> *)shapeLayersForForNode:(OsmNode *)node {
     NSMutableArray<CALayer *> *layers = [NSMutableArray array];
     
-    CALayer *fieldOfViewLayer = [self fieldOfViewShapeLayersWithCameraNode:node];
+    CALayer *fieldOfViewLayer = [self fieldOfViewShapeLayerWithCameraNode:node];
     if (fieldOfViewLayer) {
         [layers addObject:fieldOfViewLayer];
     }
@@ -1726,7 +1726,7 @@ const static CGFloat Z_ARROWS			= Z_BASE + 11 * ZSCALE;
  @param node The node to get the layers for.
  @return A `CALayer` instance for rendering the given node's field of view.
  */
-- (CALayer *)fieldOfViewShapeLayersWithCameraNode:(OsmNode *)node {
+- (CALayer *)fieldOfViewShapeLayerWithCameraNode:(OsmNode *)node {
     BOOL isSurveillanceCamera = [node.tags[@"surveillance:type"] isEqualToString:@"camera"];
     if (!isSurveillanceCamera) {
         // For nodes other than surveillance cameras, we don't want to have a FOV shape layer.
