@@ -1744,8 +1744,9 @@ const static CGFloat Z_ARROWS			= Z_BASE + 11 * ZSCALE;
     
     CAShapeLayer *layer = [CAShapeLayer layer];
     
-    layer.fillColor = [UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:0.1].CGColor;
-    layer.strokeColor = [UIColor redColor].CGColor;
+    layer.fillColor = [UIColor colorWithWhite:0.2 alpha:0.9].CGColor;
+    layer.strokeColor = [UIColor colorWithWhite:1.0 alpha:0.9].CGColor;
+    layer.lineWidth = 0.5;
     
     layer.zPosition = -1;
     
@@ -1754,8 +1755,8 @@ const static CGFloat Z_ARROWS			= Z_BASE + 11 * ZSCALE;
     double screenAngle = OSMTransformRotation(self.mapView.screenFromMapTransform);
     layer.affineTransform = CGAffineTransformMakeRotation(screenAngle);
     
-    CGFloat radius = 40.0;
-    CGFloat fieldOfViewRadius = 45;
+    CGFloat radius = 30.0;
+    CGFloat fieldOfViewRadius = 55;
     CGMutablePathRef path = CGPathCreateMutable();
     CGPathAddArc(path,
                  NULL,
