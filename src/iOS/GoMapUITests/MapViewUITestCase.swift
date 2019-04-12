@@ -33,6 +33,13 @@ class MapViewUITestCase: XCTestCase {
         waitForViewController("Search for Location")
     }
     
+    func testLongTapOnTheAddButtonShouldPresentThePOITypeSelection() {
+        let button = app.buttons["add_button"]
+        button.press(forDuration: 1.0)
+        
+        waitForViewController("POI Type")
+    }
+    
 }
 
 extension XCTestCase {
