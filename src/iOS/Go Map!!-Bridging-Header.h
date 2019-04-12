@@ -4,3 +4,4 @@
 
 #import "OsmObjects.h"
 #import "CommonTagList.h"
+#import "MapViewController.h"
