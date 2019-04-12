@@ -54,6 +54,7 @@
                                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uWA-Q5-QJr">
                                                     <rect key="frame" x="143" y="0.0" width="44" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="add_button"/>
                                                     <gestureRecognizers/>
                                                     <state key="normal" image="709-plus-toolbar.png"/>
                                                 </button>
