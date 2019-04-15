@@ -27,10 +27,6 @@ extension MapViewController {
         // Make sure that the "Common Tags" item is selected.
         poiTabBarController.selectedIndex = 0
         
-        present(poiTabBarController, animated: true) {
-            guard let navigationController = poiTabBarController.viewControllers?.first as? UINavigationController else {
-                return
-            }
-        }
+        present(poiTabBarController, animated: true)
     }
 }
