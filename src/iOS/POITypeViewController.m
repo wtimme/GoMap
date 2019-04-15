@@ -70,6 +70,12 @@ static NSInteger			mostRecentMaximum;
 	}
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [_searchBar becomeFirstResponder];
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
 	return _isTopLevel ? 2 : 1;
