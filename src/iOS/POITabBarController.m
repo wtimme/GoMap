@@ -21,6 +21,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSInteger tabIndex = [[NSUserDefaults standardUserDefaults] integerForKey:@"POITabIndex"];
+    self.selectedIndex = tabIndex;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -39,9 +42,6 @@
 
 		self.relationList = [selection.parentRelations mutableCopy];
 	}
-
-	NSInteger tabIndex = [[NSUserDefaults standardUserDefaults] integerForKey:@"POITabIndex"];
-	self.selectedIndex = tabIndex;
     
     [self updatePOIAttributesTabBarItemVisibilityWithSelectedObject:selection];
 }
