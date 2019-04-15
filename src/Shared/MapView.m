@@ -3041,8 +3041,11 @@ NSString * ActionTitle( EDIT_ACTION action, BOOL abbrev )
 {
 	if ( _editorLayer.selectedPrimary == nil ) {
 		// create new object
-		assert( _pushpinView );
-		CGPoint point = _pushpinView.arrowPoint;
+		CGPoint point = [self center];
+        if (_pushpinView) {
+            point = _pushpinView.arrowPoint;
+        }
+        
 		OsmNode * node = [_editorLayer createNodeAtPoint:point];
 		[_editorLayer.mapData setTags:tags forObject:node];
 		_editorLayer.selectedNode = node;
