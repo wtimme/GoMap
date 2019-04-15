@@ -16,6 +16,14 @@ extension MapViewController {
             return
         }
         
+        guard let navigationController = poiTabBarController.viewControllers?.first as? UINavigationController else {
+            assertionFailure("The view controller hierarchy is not set up as expected.")
+            return
+        }
+        
+        // Present the "POIType" view controller
+        navigationController.viewControllers.last?.performSegue(withIdentifier: "POITypeSegue", sender: nil)
+        
         // Make sure that the "Common Tags" item is selected.
         poiTabBarController.selectedIndex = 0
         
@@ -23,8 +31,6 @@ extension MapViewController {
             guard let navigationController = poiTabBarController.viewControllers?.first as? UINavigationController else {
                 return
             }
-            
-            navigationController.viewControllers.last?.performSegue(withIdentifier: "POITypeSegue", sender: nil)
         }
     }
 }
