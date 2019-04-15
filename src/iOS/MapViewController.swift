@@ -10,6 +10,11 @@ import UIKit
 
 extension MapViewController {
     @IBAction func didLongTapOnAddButton(_ sender: AnyObject) {
+        guard nil == mapView.editorLayer.selectedPrimary else {
+            // Ignore long-taps when an object is selected.
+            return
+        }
+        
         let storyboard = UIStoryboard(name: "MainStoryboard", bundle: nil)
         
         guard let poiTabBarController = storyboard.instantiateViewController(withIdentifier: "poiTabBar") as? POITabBarController else {

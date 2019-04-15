@@ -8,3 +8,4 @@
 #import "POITabBarController.h"
 #import "MapView.h"
 #import "OsmObjects.h"
+#import "EditorMapLayer.h"
