@@ -10,14 +10,12 @@
 
 @implementation RotatingNavigationController
 
-- (BOOL)shouldAutorotate
-{
-	return YES;
+- (BOOL)shouldAutorotate {
+    return YES;
 }
 
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations
-{
-	return UIInterfaceOrientationMaskAll;
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskAll;
 }
 
 @end

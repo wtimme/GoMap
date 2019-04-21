@@ -8,33 +8,27 @@
 
 #import "UsersWindowController.h"
 
-
 @implementation UsersWindowController
 
 @synthesize users = _users;
 
-
-+(id)usersWindowController
-{
-	UsersWindowController * wc = [[UsersWindowController alloc] initWithWindowNibName:@"UsersWindowController"];
-	return wc;
++ (id)usersWindowController {
+    UsersWindowController *wc = [[UsersWindowController alloc] initWithWindowNibName:@"UsersWindowController"];
+    return wc;
 }
 
--(void)windowDidLoad
-{
-	NSSortDescriptor *sorter = [[NSSortDescriptor alloc] initWithKey:@"user" ascending:YES selector:@selector(caseInsensitiveCompare:)];
-	[_arrayController setSortDescriptors:@[sorter]];
+- (void)windowDidLoad {
+    NSSortDescriptor *sorter = [[NSSortDescriptor alloc] initWithKey:@"user" ascending:YES selector:@selector(caseInsensitiveCompare:)];
+    [_arrayController setSortDescriptors:@[ sorter ]];
 }
 
--(void)setUsers:(NSArray *)users
-{
-	_users = users;
-	[_tableView reloadData];
+- (void)setUsers:(NSArray *)users {
+    _users = users;
+    [_tableView reloadData];
 }
 
--(NSArray *)users
-{
-	return _users;
+- (NSArray *)users {
+    return _users;
 }
 
 @end

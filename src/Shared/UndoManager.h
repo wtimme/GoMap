@@ -10,46 +10,42 @@
 
 #import "VectorMath.h"
 
+static NSString *UndoManagerDidChangeNotification = @"UndoManagerDidChangeNotification";
 
-static NSString * UndoManagerDidChangeNotification = @"UndoManagerDidChangeNotification";
+typedef void (^UndoManagerChangeCallback)(void);
 
+@interface UndoManager : NSObject <NSCoding> {
+    CFRunLoopObserverRef _runLoopObserver;
 
+    NSMutableArray *_undoStack;
+    NSMutableArray *_redoStack;
 
-typedef void(^UndoManagerChangeCallback)(void);
+    BOOL _isUndoing;
+    BOOL _isRedoing;
 
-@interface UndoManager : NSObject <NSCoding>
-{
-	CFRunLoopObserverRef _runLoopObserver;
-	
-	NSMutableArray	*	_undoStack;
-	NSMutableArray	*	_redoStack;
-	
-	BOOL				_isUndoing;
-	BOOL				_isRedoing;
+    NSMutableArray *_groupingStack; // for explicit grouping
 
-	NSMutableArray	*	_groupingStack;	// for explicit grouping
-
-	NSMutableArray	*	_commentList;
+    NSMutableArray *_commentList;
 }
 
-@property (readonly,nonatomic) BOOL			isUndoing;
-@property (readonly,nonatomic) BOOL			isRedoing;
-@property (readonly,nonatomic) BOOL			canUndo;
-@property (readonly,nonatomic) BOOL			canRedo;
-@property (readonly,nonatomic) NSInteger	countUndoGroups;
-@property (assign) NSInteger				runLoopCounter;
+@property(readonly, nonatomic) BOOL isUndoing;
+@property(readonly, nonatomic) BOOL isRedoing;
+@property(readonly, nonatomic) BOOL canUndo;
+@property(readonly, nonatomic) BOOL canRedo;
+@property(readonly, nonatomic) NSInteger countUndoGroups;
+@property(assign) NSInteger runLoopCounter;
 
--(NSSet *)objectRefs;
+- (NSSet *)objectRefs;
 
 - (void)registerUndoComment:(NSDictionary *)comment;
 - (void)registerUndoWithTarget:(id)target selector:(SEL)selector objects:(NSArray *)objects;
 
--(NSDictionary *)undo;	// returns the oldest comment registered within the undo group
--(NSDictionary *)redo;
--(void)removeAllActions;
--(void)removeMostRecentRedo;
+- (NSDictionary *)undo; // returns the oldest comment registered within the undo group
+- (NSDictionary *)redo;
+- (void)removeAllActions;
+- (void)removeMostRecentRedo;
 
--(void)beginUndoGrouping;
--(void)endUndoGrouping;
+- (void)beginUndoGrouping;
+- (void)endUndoGrouping;
 
 @end

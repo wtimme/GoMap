@@ -10,21 +10,20 @@
 
 @class AerialService;
 
-@interface AerialEditViewController : UITableViewController
-{
-	IBOutlet UITextField *	nameField;
-	IBOutlet UITextField *	urlField;
-	IBOutlet UITextField *	zoomField;
+@interface AerialEditViewController : UITableViewController {
+    IBOutlet UITextField *nameField;
+    IBOutlet UITextField *urlField;
+    IBOutlet UITextField *zoomField;
 }
 
-@property NSString * name;
-@property NSString * url;
-@property NSNumber * zoom;
+@property NSString *name;
+@property NSString *url;
+@property NSNumber *zoom;
 
-@property (copy) void (^completion)(AerialService * service);
+@property(copy) void (^completion)(AerialService *service);
 
--(IBAction)contentChanged:(id)sender;
--(IBAction)done:(id)sender;
--(IBAction)cancel:(id)sender;
+- (IBAction)contentChanged:(id)sender;
+- (IBAction)done:(id)sender;
+- (IBAction)cancel:(id)sender;
 
 @end

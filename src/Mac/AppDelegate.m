@@ -10,22 +10,18 @@
 #import "EditorMapLayer.h"
 #import "MainWindowController.h"
 
-
 @implementation AppDelegate
 
-+(AppDelegate *)getAppDelegate
-{
-	return (AppDelegate *)[[NSApplication sharedApplication] delegate];
++ (AppDelegate *)getAppDelegate {
+    return (AppDelegate *)[[NSApplication sharedApplication] delegate];
 }
 
-- (NSString *)appName
-{
-	return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
+- (NSString *)appName {
+    return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
 }
 
-- (NSString *)appVersion
-{
-	return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+- (NSString *)appVersion {
+    return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
 }
 
 #if 0
@@ -42,12 +38,11 @@
 }
 #endif
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
-	self.userName		= [[NSUserDefaults standardUserDefaults] objectForKey:@"userName"];
-	self.userPassword	= [[NSUserDefaults standardUserDefaults] objectForKey:@"userPassword"];
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    self.userName = [[NSUserDefaults standardUserDefaults] objectForKey:@"userName"];
+    self.userPassword = [[NSUserDefaults standardUserDefaults] objectForKey:@"userPassword"];
 
-	self.mainWindowController = [[MainWindowController alloc] init];
+    self.mainWindowController = [[MainWindowController alloc] init];
     [self.mainWindowController showWindow:self];
 
 #if 0
@@ -56,13 +51,11 @@
 #endif
 }
 
-- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender
-{
-	return YES;
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender {
+    return YES;
 }
 
-- (void)applicationWillTerminate:(NSNotification *)notification
-{	
+- (void)applicationWillTerminate:(NSNotification *)notification {
 #if 0
 	BOOL enableMapCss	= self.mainWindowController.mapView.editorLayer.enableMapCss;
 	[[NSUserDefaults standardUserDefaults] setBool:enableMapCss forKey:@"enableMapCss"];

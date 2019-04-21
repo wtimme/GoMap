@@ -8,13 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface TagInfoEditorWindowController : NSWindowController
-{
-	IBOutlet NSTableView	*	_tableView;
-	NSMutableArray			*	_tagArray;
+@interface TagInfoEditorWindowController : NSWindowController {
+    IBOutlet NSTableView *_tableView;
+    NSMutableArray *_tagArray;
 }
-@property (assign,nonatomic) IBOutlet NSArrayController	*	arrayController;
-@property (strong,nonatomic) NSString					*	searchText;
+@property(assign, nonatomic) IBOutlet NSArrayController *arrayController;
+@property(strong, nonatomic) NSString *searchText;
 
--(IBAction)saveXml:(id)sender;
+- (IBAction)saveXml:(id)sender;
 @end

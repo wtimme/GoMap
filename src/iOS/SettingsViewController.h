@@ -10,11 +10,9 @@
 
 #import <UIKit/UIKit.h>
 
-
-@interface SettingsViewController : UITableViewController <MFMailComposeViewControllerDelegate>
-{
-	IBOutlet UITableViewCell	*	_sendMailCell;
-	IBOutlet UILabel			*	_username;
-	IBOutlet UILabel			*	_language;
+@interface SettingsViewController : UITableViewController <MFMailComposeViewControllerDelegate> {
+    IBOutlet UITableViewCell *_sendMailCell;
+    IBOutlet UILabel *_username;
+    IBOutlet UILabel *_language;
 }
 @end

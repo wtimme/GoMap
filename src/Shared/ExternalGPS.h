@@ -6,18 +6,15 @@
 //  Copyright © 2016 Bryce Cogswell. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <ExternalAccessory/ExternalAccessory.h>
+#import <Foundation/Foundation.h>
 
-
-@interface ExternalGPS : NSObject<NSStreamDelegate>
-{
-	EASession * _session;
-	NSMutableData * _readData;
-	NSMutableData * _writeData;
+@interface ExternalGPS : NSObject <NSStreamDelegate> {
+    EASession *_session;
+    NSMutableData *_readData;
+    NSMutableData *_writeData;
 }
 
-@property (strong,nonatomic)	EAAccessoryManager *	accessoryManager;
-
+@property(strong, nonatomic) EAAccessoryManager *accessoryManager;
 
 @end

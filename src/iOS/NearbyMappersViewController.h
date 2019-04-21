@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-
-@interface NearbyMappersViewController : UITableViewController
-{
-	NSArray		*	_mappers;
+@interface NearbyMappersViewController : UITableViewController {
+    NSArray *_mappers;
 }
 @end

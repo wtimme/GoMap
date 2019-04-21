@@ -8,15 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 
-
-@interface UsersWindowController : NSWindowController
-{
-	IBOutlet NSTableView		*	_tableView;
-	IBOutlet NSArrayController	*	_arrayController;
+@interface UsersWindowController : NSWindowController {
+    IBOutlet NSTableView *_tableView;
+    IBOutlet NSArrayController *_arrayController;
 }
-@property (strong,nonatomic)	NSArray	*	users;
+@property(strong, nonatomic) NSArray *users;
 
-
-+(id)usersWindowController;
++ (id)usersWindowController;
 
 @end

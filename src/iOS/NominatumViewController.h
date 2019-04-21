@@ -8,15 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NominatumViewController : UIViewController <UISearchBarDelegate>
-{
-	IBOutlet UISearchBar				*	_searchBar;
-	NSMutableArray						*	_resultsArray;
-	IBOutlet UIActivityIndicatorView	*	_activityIndicator;
-	IBOutlet UITableView				*	_tableView;
-	NSArray								*	_historyArray;
+@interface NominatumViewController : UIViewController <UISearchBarDelegate> {
+    IBOutlet UISearchBar *_searchBar;
+    NSMutableArray *_resultsArray;
+    IBOutlet UIActivityIndicatorView *_activityIndicator;
+    IBOutlet UITableView *_tableView;
+    NSArray *_historyArray;
 }
 
--(IBAction)cancel:(id)sender;
+- (IBAction)cancel:(id)sender;
 
 @end

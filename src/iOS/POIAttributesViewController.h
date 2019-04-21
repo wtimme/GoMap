@@ -10,9 +10,7 @@
 
 @class AttributeCustomCell;
 
-
-@interface POIAttributesViewController : UITableViewController <UITableViewDataSource,UITableViewDelegate>
-{
-	IBOutlet UIBarButtonItem	*	_saveButton;
+@interface POIAttributesViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate> {
+    IBOutlet UIBarButtonItem *_saveButton;
 }
 @end

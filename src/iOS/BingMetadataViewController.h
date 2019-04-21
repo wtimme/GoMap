@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface BingMetadataViewController : UIViewController
-@property (assign,nonatomic)	IBOutlet UIActivityIndicatorView *	activityIndicator;
-@property (assign,nonatomic)	IBOutlet UITextView				*	textView;
+@property(assign, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property(assign, nonatomic) IBOutlet UITextView *textView;
 
--(IBAction)cancel:(id)sender;
+- (IBAction)cancel:(id)sender;
 
 @end

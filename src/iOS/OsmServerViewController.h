@@ -10,6 +10,6 @@
 
 @interface OsmServerViewController : UITableViewController
 
-@property (assign,nonatomic) IBOutlet UITextField	*	hostname;
+@property(assign, nonatomic) IBOutlet UITextField *hostname;
 
 @end

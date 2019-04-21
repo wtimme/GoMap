@@ -9,41 +9,36 @@
 #import "OsmServerViewController.h"
 #import "AppDelegate.h"
 #import "EditorMapLayer.h"
-#import "OsmMapData.h"
 #import "MapView.h"
+#import "OsmMapData.h"
 
 @implementation OsmServerViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
 
-	self.tableView.estimatedRowHeight = 44;
-	self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 44;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
 }
 
-- (IBAction)textFieldReturn:(id)sender
-{
-	[sender resignFirstResponder];
+- (IBAction)textFieldReturn:(id)sender {
+    [sender resignFirstResponder];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
 
-- (void)viewWillAppear:(BOOL)animated
-{
-	[super viewWillAppear:animated];
-
-	AppDelegate * appDelegate = [AppDelegate getAppDelegate];
-	OsmMapData * mapData = appDelegate.mapView.editorLayer.mapData;
-	self.hostname.text = [mapData getServer];
+    AppDelegate *appDelegate = [AppDelegate getAppDelegate];
+    OsmMapData *mapData = appDelegate.mapView.editorLayer.mapData;
+    self.hostname.text = [mapData getServer];
 }
 
-- (void)viewWillDisappear:(BOOL)animated
-{
-	[super viewWillDisappear:animated];
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
 
-	AppDelegate * appDelegate = [AppDelegate getAppDelegate];
-	OsmMapData * mapData = appDelegate.mapView.editorLayer.mapData;
-	[mapData setServer:self.hostname.text];
+    AppDelegate *appDelegate = [AppDelegate getAppDelegate];
+    OsmMapData *mapData = appDelegate.mapView.editorLayer.mapData;
+    [mapData setServer:self.hostname.text];
 }
 
 @end

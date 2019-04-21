@@ -10,9 +10,8 @@
 
 @class CustomPresetList;
 
-@interface CustomPresetListViewController : UITableViewController <UITableViewDelegate,UITableViewDataSource>
-{
-	CustomPresetList * _customPresets;
+@interface CustomPresetListViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource> {
+    CustomPresetList *_customPresets;
 }
 
 @end

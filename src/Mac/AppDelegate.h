@@ -12,19 +12,18 @@
 @class MainWindowController;
 @class MapView;
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
-{
+@interface AppDelegate : NSObject <NSApplicationDelegate> {
 }
 
-@property (strong,nonatomic) 	MainWindowController	*	mainWindowController;
-@property (assign,nonatomic)	MapView					*	mapView;
+@property(strong, nonatomic) MainWindowController *mainWindowController;
+@property(assign, nonatomic) MapView *mapView;
 
-@property (strong,nonatomic) NSString *	userName;
-@property (strong,nonatomic) NSString *	userPassword;
+@property(strong, nonatomic) NSString *userName;
+@property(strong, nonatomic) NSString *userPassword;
 
-+(AppDelegate *)getAppDelegate;
++ (AppDelegate *)getAppDelegate;
 
--(NSString *)appName;
--(NSString *)appVersion;
+- (NSString *)appName;
+- (NSString *)appVersion;
 
 @end

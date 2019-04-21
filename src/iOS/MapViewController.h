@@ -6,26 +6,24 @@
 //  Copyright (c) 2012 Bryce Cogswell. All rights reserved.
 //
 
+#import "MapView.h"
 #import <CoreLocation/CoreLocation.h>
 #import <UIKit/UIKit.h>
-#import "MapView.h"
-
 
 @class MapView;
 
-@interface MapViewController : UIViewController <UIActionSheetDelegate,UIGestureRecognizerDelegate>
-{
-	IBOutlet UIToolbar		*	_toolbar;
-	IBOutlet UIBarButtonItem *	_uploadButton;
-	IBOutlet UIBarButtonItem *	_undoButton;
-	IBOutlet UIBarButtonItem *	_redoButton;
+@interface MapViewController : UIViewController <UIActionSheetDelegate, UIGestureRecognizerDelegate> {
+    IBOutlet UIToolbar *_toolbar;
+    IBOutlet UIBarButtonItem *_uploadButton;
+    IBOutlet UIBarButtonItem *_undoButton;
+    IBOutlet UIBarButtonItem *_redoButton;
 }
 
-@property (assign,nonatomic) IBOutlet MapView		*	mapView;
-@property (assign,nonatomic) IBOutlet UIBarButtonItem * locationButton;
+@property(assign, nonatomic) IBOutlet MapView *mapView;
+@property(assign, nonatomic) IBOutlet UIBarButtonItem *locationButton;
 
--(IBAction)toggleLocation:(id)sender;
--(void)setGpsState:(GPS_STATE)state;
+- (IBAction)toggleLocation:(id)sender;
+- (void)setGpsState:(GPS_STATE)state;
 
 - (void)updateUndoRedoButtonState;
 

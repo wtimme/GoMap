@@ -1,5 +1,5 @@
-#import <Foundation/Foundation.h>
 #import "DDXML.h"
+#import <Foundation/Foundation.h>
 
 // These methods are not part of the standard NSXML API.
 // But any developer working extensively with XML will likely appreciate them.
@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)addAttributeWithName:(NSString *)name stringValue:(NSString *)string;
 
-- (NSDictionary<NSString*,NSString*> *)attributesAsDictionary;
+- (NSDictionary<NSString *, NSString *> *)attributesAsDictionary;
 
 @end
 NS_ASSUME_NONNULL_END

@@ -6,43 +6,40 @@
 //  Copyright (c) 2012 Bryce Cogswell. All rights reserved.
 //
 
+#import "POITabBarController.h"
 #import "AppDelegate.h"
 #import "EditorMapLayer.h"
 #import "MapView.h"
 #import "OsmMapData.h"
 #import "OsmObjects.h"
-#import "POICommonTagsViewController.h"
-#import "POITabBarController.h"
 #import "POIAttributesViewController.h"
+#import "POICommonTagsViewController.h"
 
 @implementation POITabBarController
 
-
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-	[super viewWillAppear:animated];
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
 
-	AppDelegate * appDelegate = [AppDelegate getAppDelegate];
-	OsmBaseObject * selection = appDelegate.mapView.editorLayer.selectedPrimary;
-	self.selection = selection;
-	self.keyValueDict = [NSMutableDictionary new];
-	self.relationList = [NSMutableArray new];
-	if ( selection ) {
-		[selection.tags enumerateKeysAndObjectsUsingBlock:^(NSString * key, NSString * obj, BOOL *stop) {
-			[_keyValueDict setObject:obj forKey:key];
-		}];
+    AppDelegate *appDelegate = [AppDelegate getAppDelegate];
+    OsmBaseObject *selection = appDelegate.mapView.editorLayer.selectedPrimary;
+    self.selection = selection;
+    self.keyValueDict = [NSMutableDictionary new];
+    self.relationList = [NSMutableArray new];
+    if (selection) {
+        [selection.tags enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *obj, BOOL *stop) {
+          [_keyValueDict setObject:obj forKey:key];
+        }];
 
-		self.relationList = [selection.parentRelations mutableCopy];
-	}
+        self.relationList = [selection.parentRelations mutableCopy];
+    }
 
-	NSInteger tabIndex = [[NSUserDefaults standardUserDefaults] integerForKey:@"POITabIndex"];
-	self.selectedIndex = tabIndex;
-    
+    NSInteger tabIndex = [[NSUserDefaults standardUserDefaults] integerForKey:@"POITabIndex"];
+    self.selectedIndex = tabIndex;
+
     [self updatePOIAttributesTabBarItemVisibilityWithSelectedObject:selection];
 }
 
@@ -56,59 +53,50 @@
     if (isAddingNewItem) {
         // Remove the `POIAttributesViewController`.
         NSMutableArray<UIViewController *> *viewControllersToKeep = [NSMutableArray array];
-        [self.viewControllers enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            
-            if ([obj isKindOfClass:[UINavigationController class]] && [[(UINavigationController *)obj viewControllers].firstObject isKindOfClass:[POIAttributesViewController class]]) {
-                // For new objects, the navigation controller that contains the view controller
-                // for POI attributes is not needed; ignore it.
-                return;
-            } else {
-                [viewControllersToKeep addObject:obj];
-            }
+        [self.viewControllers enumerateObjectsUsingBlock:^(__kindof UIViewController *_Nonnull obj, NSUInteger idx, BOOL *_Nonnull stop) {
+          if ([obj isKindOfClass:[UINavigationController class]] && [[(UINavigationController *)obj viewControllers].firstObject isKindOfClass:[POIAttributesViewController class]]) {
+              // For new objects, the navigation controller that contains the view controller
+              // for POI attributes is not needed; ignore it.
+              return;
+          } else {
+              [viewControllersToKeep addObject:obj];
+          }
         }];
-        
+
         [self setViewControllers:viewControllersToKeep animated:NO];
     }
 }
 
-- (void)setFeatureKey:(NSString *)key value:(NSString *)value
-{
-	if ( value ) {
-		[_keyValueDict setObject:value forKey:key];
-	} else {
-		[_keyValueDict removeObjectForKey:key];
-	}
+- (void)setFeatureKey:(NSString *)key value:(NSString *)value {
+    if (value) {
+        [_keyValueDict setObject:value forKey:key];
+    } else {
+        [_keyValueDict removeObjectForKey:key];
+    }
 }
 
-- (void)commitChanges
-{
-	AppDelegate * appDelegate = [AppDelegate getAppDelegate];
-	[appDelegate.mapView setTagsForCurrentObject:self.keyValueDict];
+- (void)commitChanges {
+    AppDelegate *appDelegate = [AppDelegate getAppDelegate];
+    [appDelegate.mapView setTagsForCurrentObject:self.keyValueDict];
 }
 
-- (BOOL)isTagDictChanged:(NSDictionary *)newDictionary
-{
-	AppDelegate * appDelegate = [AppDelegate getAppDelegate];
+- (BOOL)isTagDictChanged:(NSDictionary *)newDictionary {
+    AppDelegate *appDelegate = [AppDelegate getAppDelegate];
 
-	NSDictionary * tags = appDelegate.mapView.editorLayer.selectedPrimary.tags;
-	if ( tags.count == 0 )
-		return newDictionary.count != 0;
+    NSDictionary *tags = appDelegate.mapView.editorLayer.selectedPrimary.tags;
+    if (tags.count == 0)
+        return newDictionary.count != 0;
 
-	return ![newDictionary isEqual:tags];
+    return ![newDictionary isEqual:tags];
 }
 
-- (BOOL)isTagDictChanged
-{
-	return [self isTagDictChanged:self.keyValueDict];
+- (BOOL)isTagDictChanged {
+    return [self isTagDictChanged:self.keyValueDict];
 }
 
-
-
-- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
-{
-	NSInteger tabIndex = [tabBar.items indexOfObject:item];
-	[[NSUserDefaults standardUserDefaults] setInteger:tabIndex forKey:@"POITabIndex"];
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
+    NSInteger tabIndex = [tabBar.items indexOfObject:item];
+    [[NSUserDefaults standardUserDefaults] setInteger:tabIndex forKey:@"POITabIndex"];
 }
-
 
 @end

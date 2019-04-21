@@ -13,12 +13,11 @@
 #endif
 #import "iosapi.h"
 
-@interface SpeechBalloonView : NSView
-{
-	CGMutablePathRef	_path;
+@interface SpeechBalloonView : NSView {
+    CGMutablePathRef _path;
 }
 
 - (id)initWithText:(NSString *)text;
-- (void) setPoint:(CGPoint)point;
-- (void) setTargetView:(UIView *)view;
+- (void)setPoint:(CGPoint)point;
+- (void)setTargetView:(UIView *)view;
 @end

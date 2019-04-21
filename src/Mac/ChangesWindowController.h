@@ -11,19 +11,17 @@
 
 @class OsmMapData;
 
-
-@interface ChangesWindowController : NSWindowController
-{
-	IBOutlet WebView				*	_webView;
-	IBOutlet NSTextField			*	_commentTextField;
-	IBOutlet NSProgressIndicator	*	_progressIndicator;
-	IBOutlet NSButton				*	_uploadButton;
-	IBOutlet NSButton				*	_cancelButton;
-	OsmMapData						*	_mapData;
+@interface ChangesWindowController : NSWindowController {
+    IBOutlet WebView *_webView;
+    IBOutlet NSTextField *_commentTextField;
+    IBOutlet NSProgressIndicator *_progressIndicator;
+    IBOutlet NSButton *_uploadButton;
+    IBOutlet NSButton *_cancelButton;
+    OsmMapData *_mapData;
 }
--(BOOL)setMapdata:(OsmMapData *)mapData;
+- (BOOL)setMapdata:(OsmMapData *)mapData;
 
--(IBAction)upload:(id)sender;
--(IBAction)cancel:(id)sender;
+- (IBAction)upload:(id)sender;
+- (IBAction)cancel:(id)sender;
 
 @end

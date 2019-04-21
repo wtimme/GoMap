@@ -8,13 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GpxViewController : UITableViewController <UITableViewDelegate,UITableViewDataSource>
-{
-	NSTimer						*	_timer;
-	IBOutlet UINavigationBar	*	_navigationBar;
+@interface GpxViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource> {
+    NSTimer *_timer;
+    IBOutlet UINavigationBar *_navigationBar;
 }
 
--(IBAction)cancel:(id)sender;
--(void)shareTrack:(GpxTrack *)track;
+- (IBAction)cancel:(id)sender;
+- (void)shareTrack:(GpxTrack *)track;
 
 @end

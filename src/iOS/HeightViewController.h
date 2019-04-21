@@ -6,36 +6,32 @@
 //  Copyright (c) 2014 Bryce Cogswell. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import <CoreMedia/CoreMedia.h>
 #import <AVFoundation/AVFoundation.h>
+#import <CoreMedia/CoreMedia.h>
+#import <UIKit/UIKit.h>
 
 @class CLLocation;
 
+@interface HeightViewController : UIViewController <UIAlertViewDelegate> {
+    AVCaptureSession *_captureSession;
+    AVCaptureVideoPreviewLayer *_previewLayer;
+    CMMotionManager *_coreMotion;
+    double _cameraFOV;
+    BOOL _canZoom;
 
-@interface HeightViewController : UIViewController <UIAlertViewDelegate>
-{
-	AVCaptureSession			*	_captureSession;
-	AVCaptureVideoPreviewLayer	*	_previewLayer;
-	CMMotionManager				*	_coreMotion;
-	double							_cameraFOV;
-	BOOL							_canZoom;
+    IBOutlet UIButton *_distanceLabel;
+    IBOutlet UIButton *_heightLabel;
+    IBOutlet UIButton *_applyButton;
+    IBOutlet UIButton *_cancelButton;
 
-	IBOutlet UIButton			*	_distanceLabel;
-	IBOutlet UIButton			*	_heightLabel;
-	IBOutlet UIButton			*	_applyButton;
-	IBOutlet UIButton			*	_cancelButton;
+    NSMutableDictionary *_rulerViews;
+    NSMutableDictionary *_rulerLayers;
+    BOOL _isExiting;
+    CGFloat _scrollPosition;
+    double _totalZoom;
 
-	NSMutableDictionary			*	_rulerViews;
-	NSMutableDictionary			*	_rulerLayers;
-	BOOL							_isExiting;
-	CGFloat							_scrollPosition;
-	double							_totalZoom;
-
-	NSString					*	_currentHeight;
-	NSString					*	_alertHeight;
+    NSString *_currentHeight;
+    NSString *_alertHeight;
 }
-
-
 
 @end

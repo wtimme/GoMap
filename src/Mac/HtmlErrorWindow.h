@@ -8,13 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 
-
 @class WebView;
 
-@interface HtmlErrorWindow : NSWindowController
-{
-	NSString			*	_html;
-	IBOutlet WebView	*	_webView;
+@interface HtmlErrorWindow : NSWindowController {
+    NSString *_html;
+    IBOutlet WebView *_webView;
 }
 - (id)initWithHtml:(NSString *)html;
 

@@ -8,11 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface POIPresetViewController : UITableViewController
-{
+@interface POIPresetViewController : UITableViewController {
 }
 
-@property NSString	*	tag;
-@property NSArray	*	valueDefinitions;
+@property NSString *tag;
+@property NSArray *valueDefinitions;
 
 @end

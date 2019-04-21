@@ -8,19 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-extern NSString * NetworkStatusChangedNotification;
+extern NSString *NetworkStatusChangedNotification;
 
 typedef enum : NSInteger {
-	NetworkNone = 0,
-	NetworkWiFi,
-	NetworkCel
+    NetworkNone = 0,
+    NetworkWiFi,
+    NetworkCel
 } NetworkConnectivity;
-
 
 @interface NetworkStatus : NSObject
 
-@property (readonly,assign)		uint32_t			currentFlags;
-@property (readonly,nonatomic)	NetworkConnectivity	currentConnectivity;
+@property(readonly, assign) uint32_t currentFlags;
+@property(readonly, nonatomic) NetworkConnectivity currentConnectivity;
 
 + (instancetype)networkStatusWithHostName:(NSString *)hostName;
 

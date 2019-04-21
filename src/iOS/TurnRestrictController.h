@@ -6,15 +6,14 @@
 //  Copyright © 2017 Bryce Cogswell. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "TurnRestrictHwyView.h"
-#import "VectorMath.h"
 #import "EditorMapLayer.h"
 #import "TagInfo.h"
+#import "TurnRestrictHwyView.h"
+#import "VectorMath.h"
+#import <UIKit/UIKit.h>
 
 //width of the way line e.g 12, 17, 18 AND shadow width is +4 e.g 16, 21, 22
-#define DEFAULT_POPUPLINEWIDTH        12
-
+#define DEFAULT_POPUPLINEWIDTH 12
 
 @class OsmNode;
 @class OsmNotesDatabase;
@@ -22,18 +21,17 @@
 
 @interface TurnRestrictController : UIViewController
 
-@property (strong, nonatomic) IBOutlet NSLayoutConstraint 	*	constraintViewWithTitleHeight;
-@property (strong, nonatomic) IBOutlet NSLayoutConstraint 	*	constraintViewWithTitleWidth;
-@property (strong, nonatomic) IBOutlet UIView 				* 	viewWithTitle;
-@property (strong, nonatomic) IBOutlet UIView 				*	detailView;
-@property (strong, nonatomic) IBOutlet UIButton 			*	infoButton;
-@property (strong, nonatomic) IBOutlet UILabel	 			*	detailText;
+@property(strong, nonatomic) IBOutlet NSLayoutConstraint *constraintViewWithTitleHeight;
+@property(strong, nonatomic) IBOutlet NSLayoutConstraint *constraintViewWithTitleWidth;
+@property(strong, nonatomic) IBOutlet UIView *viewWithTitle;
+@property(strong, nonatomic) IBOutlet UIView *detailView;
+@property(strong, nonatomic) IBOutlet UIButton *infoButton;
+@property(strong, nonatomic) IBOutlet UILabel *detailText;
 
-
-@property (strong,nonatomic)    OsmNode 		*	centralNode;	// the central node
+@property(strong, nonatomic) OsmNode *centralNode; // the central node
 
 // these are used for screen calculations:
-@property (assign,nonatomic)    CGPoint            	parentViewCenter;
-@property (assign,nonatomic)    OSMTransform       	screenFromMapTransform;
+@property(assign, nonatomic) CGPoint parentViewCenter;
+@property(assign, nonatomic) OSMTransform screenFromMapTransform;
 
 @end

@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CreditsViewController : UIViewController
-{
-	IBOutlet UITextView *	_textView;
+@interface CreditsViewController : UIViewController {
+    IBOutlet UITextView *_textView;
 }
 @end

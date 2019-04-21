@@ -8,12 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MyApplication : UIApplication
-{
-	NSMutableDictionary * 	_touches;
-	UIImage				*	_touchImage;
+@interface MyApplication : UIApplication {
+    NSMutableDictionary *_touches;
+    UIImage *_touchImage;
 }
 
-@property(assign,nonatomic)	BOOL showTouchCircles;
+@property(assign, nonatomic) BOOL showTouchCircles;
 
 @end

@@ -7,15 +7,11 @@
 
 #import <UIKit/UIKit.h>
 
-
 // https://stackoverflow.com/questions/36587126/autolayout-ignores-multi-line-detailtextlabel-when-calculating-uitableviewcell-h
 // https://github.com/tiritea/MultilineTableViewCell
 
 @interface MultilineTableViewCell : UITableViewCell
 @end
-
-
-
 
 /*
  Apache License
@@ -220,4 +216,3 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 */
-

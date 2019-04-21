@@ -10,19 +10,17 @@
 
 #import <UIKit/UIKit.h>
 
-
-@interface DisplayViewController : UITableViewController
-{
-	IBOutlet UISwitch *	_birdsEyeSwitch;
-	IBOutlet UISwitch *	_rotationSwitch;
-	IBOutlet UISwitch *	_notesSwitch;
-	IBOutlet UISwitch *	_gpsTraceSwitch;
-	IBOutlet UISwitch *	_unnamedRoadSwitch;
-	IBOutlet UISwitch *	_gpxLoggingSwitch;
-	IBOutlet UISwitch * _turnRestrictionSwitch;
-	IBOutlet UISwitch * _objectFiltersSwitch;
+@interface DisplayViewController : UITableViewController {
+    IBOutlet UISwitch *_birdsEyeSwitch;
+    IBOutlet UISwitch *_rotationSwitch;
+    IBOutlet UISwitch *_notesSwitch;
+    IBOutlet UISwitch *_gpsTraceSwitch;
+    IBOutlet UISwitch *_unnamedRoadSwitch;
+    IBOutlet UISwitch *_gpxLoggingSwitch;
+    IBOutlet UISwitch *_turnRestrictionSwitch;
+    IBOutlet UISwitch *_objectFiltersSwitch;
 }
 
--(void)applyChanges;
+- (void)applyChanges;
 
 @end

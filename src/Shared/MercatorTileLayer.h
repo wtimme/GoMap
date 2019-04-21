@@ -7,33 +7,31 @@
 //
 
 #import "iosapi.h"
-#import <QuartzCore/QuartzCore.h> 
+#import <QuartzCore/QuartzCore.h>
 
 @class AerialService;
 @class MapView;
 
+@interface MercatorTileLayer : CALayer <NSCacheDelegate> {
+    NSString *_tileCacheDirectory; // location of tile files
+    NSCache *_memoryTileCache;     // cache of tiles kept in memory
+    NSString *_logoUrl;
 
-@interface MercatorTileLayer : CALayer <NSCacheDelegate>
-{
-	NSString						*	_tileCacheDirectory;	// location of tile files
-	NSCache							*	_memoryTileCache;		// cache of tiles kept in memory
-	NSString						*	_logoUrl;
-
-	NSMutableDictionary				*	_layerDict;				// map of tiles currently displayed
-	int32_t								_isPerformingLayout;
+    NSMutableDictionary *_layerDict; // map of tiles currently displayed
+    int32_t _isPerformingLayout;
 }
 
-@property (strong,nonatomic) AerialService	*	aerialService;
-@property (assign,nonatomic) MapView		*	mapView;
+@property(strong, nonatomic) AerialService *aerialService;
+@property(assign, nonatomic) MapView *mapView;
 
--(id)initWithMapView:(MapView *)mapView;
--(IBAction)purgeTileCache;
--(void)diskCacheSize:(NSInteger *)pSize count:(NSInteger *)pCount;
--(int32_t)zoomLevel;
+- (id)initWithMapView:(MapView *)mapView;
+- (IBAction)purgeTileCache;
+- (void)diskCacheSize:(NSInteger *)pSize count:(NSInteger *)pCount;
+- (int32_t)zoomLevel;
 
--(NSMutableArray *)allTilesIntersectingVisibleRect;
--(void)downloadTileForKey:(NSString *)tileKey completion:(void(^)(void))completion;
+- (NSMutableArray *)allTilesIntersectingVisibleRect;
+- (void)downloadTileForKey:(NSString *)tileKey completion:(void (^)(void))completion;
 
--(void)metadata:(void(^)(NSData *,NSError *))callback;
+- (void)metadata:(void (^)(NSData *, NSError *))callback;
 
 @end

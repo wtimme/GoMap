@@ -10,28 +10,22 @@
 
 #import "HtmlErrorWindow.h"
 
-
-
 @implementation HtmlErrorWindow
 
-- (id)initWithHtml:(NSString *)html
-{
-	self = [super initWithWindowNibName:@"HtmlErrorWindow"];
-	if ( self ) {
-		_html = [html copy];
-	}
-	return self;
+- (id)initWithHtml:(NSString *)html {
+    self = [super initWithWindowNibName:@"HtmlErrorWindow"];
+    if (self) {
+        _html = [html copy];
+    }
+    return self;
 }
 
--(void)windowDidLoad
-{
-	[_webView.mainFrame loadHTMLString:_html baseURL:nil];
+- (void)windowDidLoad {
+    [_webView.mainFrame loadHTMLString:_html baseURL:nil];
 }
 
-- (IBAction)done:(id)sender
-{
-	[NSApp stopModal];
+- (IBAction)done:(id)sender {
+    [NSApp stopModal];
 }
-
 
 @end

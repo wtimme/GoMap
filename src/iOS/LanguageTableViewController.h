@@ -6,11 +6,10 @@
 //  Copyright © 2015 Bryce Cogswell. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "CommonTagList.h"
+#import <UIKit/UIKit.h>
 
-@interface LanguageTableViewController : UITableViewController <UITableViewDataSource,UITableViewDelegate>
-{
-	PresetLanguages * _languages;
+@interface LanguageTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate> {
+    PresetLanguages *_languages;
 }
 @end

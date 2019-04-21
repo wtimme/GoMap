@@ -8,12 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginViewController : UITableViewController
-{
-	IBOutlet UIBarButtonItem			*	_saveButton;
-	IBOutlet UITextField				*	_username;
-	IBOutlet UITextField				*	_password;
-	IBOutlet UIActivityIndicatorView	*	_activityIndicator;
+@interface LoginViewController : UITableViewController {
+    IBOutlet UIBarButtonItem *_saveButton;
+    IBOutlet UITextField *_username;
+    IBOutlet UITextField *_password;
+    IBOutlet UIActivityIndicatorView *_activityIndicator;
 }
 
 - (IBAction)textFieldReturn:(id)sender;

@@ -6,39 +6,32 @@
 //  Copyright (c) 2013 Bryce Cogswell. All rights reserved.
 //
 
-#import "AppDelegate.h"
 #import "HelpViewController.h"
-
+#import "AppDelegate.h"
 
 @implementation HelpViewController
 
-
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
 
-	AppDelegate * appDelegate = [AppDelegate getAppDelegate];
+    AppDelegate *appDelegate = [AppDelegate getAppDelegate];
 
-	NSAttributedString * s = _textView.attributedText;
-	NSMutableAttributedString * m = [s mutableCopy];
-	NSString * s2 = m.string;
-	NSRange range = [s2 rangeOfString:@"<version>"];
-	if ( range.length ) {
-		[m replaceCharactersInRange:range withString:appDelegate.appVersion];
-		_textView.attributedText = m;
-	}
+    NSAttributedString *s = _textView.attributedText;
+    NSMutableAttributedString *m = [s mutableCopy];
+    NSString *s2 = m.string;
+    NSRange range = [s2 rangeOfString:@"<version>"];
+    if (range.length) {
+        [m replaceCharactersInRange:range withString:appDelegate.appVersion];
+        _textView.attributedText = m;
+    }
 }
 
-- (void)viewDidLayoutSubviews
-{
+- (void)viewDidLayoutSubviews {
     [_textView setContentOffset:CGPointZero animated:NO];
 }
 
-
-- (IBAction)cancel:(id)sender
-{
-	[self dismissViewControllerAnimated:YES completion:nil];
+- (IBAction)cancel:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
-
 
 @end

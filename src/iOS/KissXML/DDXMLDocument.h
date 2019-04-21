@@ -1,6 +1,6 @@
-#import <Foundation/Foundation.h>
 #import "DDXMLElement.h"
 #import "DDXMLNode.h"
+#import <Foundation/Foundation.h>
 
 /**
  * Welcome to KissXML.
@@ -21,16 +21,15 @@
 **/
 
 enum {
-	DDXMLDocumentXMLKind = 0,
-	DDXMLDocumentXHTMLKind,
-	DDXMLDocumentHTMLKind,
-	DDXMLDocumentTextKind
+    DDXMLDocumentXMLKind = 0,
+    DDXMLDocumentXHTMLKind,
+    DDXMLDocumentHTMLKind,
+    DDXMLDocumentTextKind
 };
 typedef NSUInteger DDXMLDocumentContentKind;
 
 NS_ASSUME_NONNULL_BEGIN
-@interface DDXMLDocument : DDXMLNode
-{
+@interface DDXMLDocument : DDXMLNode {
 }
 
 - (nullable instancetype)initWithXMLString:(NSString *)string options:(NSUInteger)mask error:(NSError **)error;
@@ -73,7 +72,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 //- (void)replaceChildAtIndex:(NSUInteger)index withNode:(DDXMLNode *)node;
 
-@property (readonly, copy) NSData *XMLData;
+@property(readonly, copy) NSData *XMLData;
 - (NSData *)XMLDataWithOptions:(NSUInteger)options;
 
 //- (instancetype)objectByApplyingXSLT:(NSData *)xslt arguments:(NSDictionary *)arguments error:(NSError **)error;

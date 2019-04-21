@@ -8,37 +8,31 @@
 
 #import "TextInputWindowController.h"
 
-
 @implementation TextInputWindowController
 
--(id)init
-{
-	self = [super initWithWindowNibName:@"TextInputWindowController"];
-	if ( self ) {
-	}
-	return self;
+- (id)init {
+    self = [super initWithWindowNibName:@"TextInputWindowController"];
+    if (self) {
+    }
+    return self;
 }
 
-- (void)beginSheetModalForWindow:(NSWindow *)window completionHandler:(void (^)(BOOL accepted))handler
-{
-	_handler = handler;
-	[NSApp beginSheet:self.window modalForWindow:window modalDelegate:self didEndSelector:@selector(sheetDidEnd:returnCode:contextInfo:) contextInfo:NULL];
+- (void)beginSheetModalForWindow:(NSWindow *)window completionHandler:(void (^)(BOOL accepted))handler {
+    _handler = handler;
+    [NSApp beginSheet:self.window modalForWindow:window modalDelegate:self didEndSelector:@selector(sheetDidEnd:returnCode:contextInfo:) contextInfo:NULL];
 }
 
-- (void)sheetDidEnd:(NSWindow *)sheet returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo
-{
-	_handler( (BOOL)returnCode );
-	[self close];
+- (void)sheetDidEnd:(NSWindow *)sheet returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo {
+    _handler((BOOL)returnCode);
+    [self close];
 }
 
--(IBAction)ok:(id)sender
-{
-	[NSApp endSheet:self.window returnCode:YES];
+- (IBAction)ok:(id)sender {
+    [NSApp endSheet:self.window returnCode:YES];
 }
 
--(IBAction)cancel:(id)sender
-{
-	[NSApp endSheet:self.window returnCode:NO];
+- (IBAction)cancel:(id)sender {
+    [NSApp endSheet:self.window returnCode:NO];
 }
 
 @end

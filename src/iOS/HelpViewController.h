@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HelpViewController : UIViewController
-{
-	IBOutlet UITextView *	_textView;
+@interface HelpViewController : UIViewController {
+    IBOutlet UITextView *_textView;
 }
 - (IBAction)cancel:(id)sender;
 

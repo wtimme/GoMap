@@ -8,27 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TextPair : UITableViewCell
-{
-	IBOutlet UIView				*	_fixContstraintView;
-	IBOutlet NSLayoutConstraint *	_fixConstraint;
+@interface TextPair : UITableViewCell {
+    IBOutlet UIView *_fixContstraintView;
+    IBOutlet NSLayoutConstraint *_fixConstraint;
 }
-@property (assign,nonatomic) IBOutlet	AutocompleteTextField *	text1;
-@property (assign,nonatomic) IBOutlet	AutocompleteTextField *	text2;
+@property(assign, nonatomic) IBOutlet AutocompleteTextField *text1;
+@property(assign, nonatomic) IBOutlet AutocompleteTextField *text2;
 @end
-
 
 @interface AddNewCell : UITableViewCell
-@property (assign,nonatomic) IBOutlet	UIButton *	button;
+@property(assign, nonatomic) IBOutlet UIButton *button;
 @end
 
-
-@interface POIAllTagsViewController : UITableViewController
-{
-	NSMutableArray				*	_tags;
-	NSMutableArray				*	_relations;
-	NSMutableArray				*	_members;
-	IBOutlet UIBarButtonItem	*	_saveButton;
+@interface POIAllTagsViewController : UITableViewController {
+    NSMutableArray *_tags;
+    NSMutableArray *_relations;
+    NSMutableArray *_members;
+    IBOutlet UIBarButtonItem *_saveButton;
 }
 
 - (IBAction)toggleEditing:(id)sender;

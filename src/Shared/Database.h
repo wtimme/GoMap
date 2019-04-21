@@ -8,31 +8,32 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Database : NSObject
-{
-	NSString			*	_path;
-	struct sqlite3		*	_db;
+@interface Database : NSObject {
+    NSString *_path;
+    struct sqlite3 *_db;
 
-	struct sqlite3_stmt	*	_spatialInsert;
-	struct sqlite3_stmt	*	_spatialDelete;
+    struct sqlite3_stmt *_spatialInsert;
+    struct sqlite3_stmt *_spatialDelete;
 }
-@property (class,readonly,nonatomic)	dispatch_queue_t	dispatchQueue;
+@property(class, readonly, nonatomic) dispatch_queue_t dispatchQueue;
 
-+(NSString *)databasePathWithName:(NSString *)name;
-+(void)deleteDatabaseWithName:(NSString *)name;
++ (NSString *)databasePathWithName:(NSString *)name;
++ (void)deleteDatabaseWithName:(NSString *)name;
 
--(instancetype)initWithName:(NSString *)name;
--(NSString *)path;
+- (instancetype)initWithName:(NSString *)name;
+- (NSString *)path;
 
--(void)createTables;
--(void)dropTables;
+- (void)createTables;
+- (void)dropTables;
 
--(BOOL)saveNodes:(NSArray *)saveNodes saveWays:(NSArray *)saveWays saveRelations:(NSArray *)saveRelations
-		deleteNodes:(NSArray *)deleteNodes deleteWays:(NSArray *)deleteWays deleteRelations:(NSArray *)deleteRelations
-		isUpdate:(BOOL)isUpdate;
+- (BOOL)saveNodes:(NSArray *)saveNodes saveWays:(NSArray *)saveWays saveRelations:(NSArray *)saveRelations
+        deleteNodes:(NSArray *)deleteNodes
+         deleteWays:(NSArray *)deleteWays
+    deleteRelations:(NSArray *)deleteRelations
+           isUpdate:(BOOL)isUpdate;
 
--(NSMutableDictionary *)querySqliteNodes;
--(NSMutableDictionary *)querySqliteWays;
--(NSMutableDictionary *)querySqliteRelations;
+- (NSMutableDictionary *)querySqliteNodes;
+- (NSMutableDictionary *)querySqliteWays;
+- (NSMutableDictionary *)querySqliteRelations;
 
 @end

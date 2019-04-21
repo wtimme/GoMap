@@ -11,21 +11,20 @@
 @class CAGradientLayer;
 @class AutocompleteTextFieldDelegate;
 
-@interface AutocompleteTextField : UITextField <UITableViewDataSource, UITableViewDelegate>
-{
-	AutocompleteTextFieldDelegate	*	_myDelegate;
+@interface AutocompleteTextField : UITextField <UITableViewDataSource, UITableViewDelegate> {
+    AutocompleteTextFieldDelegate *_myDelegate;
 
-	UITableView						*	_completionTableView;
-	CGFloat								_origCellOffset;
-	NSArray							*	_filteredCompletions;
+    UITableView *_completionTableView;
+    CGFloat _origCellOffset;
+    NSArray *_filteredCompletions;
 
-	CAGradientLayer					*	_gradientLayer;
+    CAGradientLayer *_gradientLayer;
 }
 
-@property (copy,nonatomic)	NSArray * completions;
-@property (copy,nonatomic)	void (^didSelect)(void);
+@property(copy, nonatomic) NSArray *completions;
+@property(copy, nonatomic) void (^didSelect)(void);
 
--(void)clearFilteredCompletionsInternal;
--(void)updateAutocompleteForString:(NSString *)text;
+- (void)clearFilteredCompletionsInternal;
+- (void)updateAutocompleteForString:(NSString *)text;
 
 @end

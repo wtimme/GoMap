@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 Bryce Cogswell. All rights reserved.
 //
 
-#import <QuartzCore/QuartzCore.h>
 #import "iosapi.h"
+#import <QuartzCore/QuartzCore.h>
 
 @class NSTextStorage;
 @class NSLayoutManager;
@@ -15,19 +15,18 @@
 
 #define USE_CURVEDLAYER_CACHE 1
 
-@interface CurvedTextLayer : NSObject <NSCacheDelegate>
-{
+@interface CurvedTextLayer : NSObject <NSCacheDelegate> {
 #if USE_CURVEDLAYER_CACHE
-	NSCache	*	_layerCache;
-	NSCache	*	_framesetterCache;
-	NSCache	*	_textSizeCache;
-	BOOL		_cachedColorIsWhiteOnBlack;
+    NSCache *_layerCache;
+    NSCache *_framesetterCache;
+    NSCache *_textSizeCache;
+    BOOL _cachedColorIsWhiteOnBlack;
 #endif
 }
 
-+(instancetype)shared;
++ (instancetype)shared;
 
--(CALayer *)layerWithString:(NSString *)string whiteOnBlock:(BOOL)whiteOnBlack;
--(NSArray *)layersWithString:(NSString *)string alongPath:(CGPathRef)path whiteOnBlock:(BOOL)whiteOnBlack;
+- (CALayer *)layerWithString:(NSString *)string whiteOnBlock:(BOOL)whiteOnBlack;
+- (NSArray *)layersWithString:(NSString *)string alongPath:(CGPathRef)path whiteOnBlock:(BOOL)whiteOnBlack;
 
 @end

@@ -10,23 +10,21 @@
 
 @class ConnectionState;
 
-@interface DownloadThreadPool : NSObject <NSURLSessionDataDelegate,NSURLSessionTaskDelegate>
-{
-	int32_t				_downloadCount;
-	NSURLSession	*	_urlSession;
+@interface DownloadThreadPool : NSObject <NSURLSessionDataDelegate, NSURLSessionTaskDelegate> {
+    int32_t _downloadCount;
+    NSURLSession *_urlSession;
 }
 
++ (DownloadThreadPool *)osmPool;
++ (DownloadThreadPool *)generalPool;
 
-+(DownloadThreadPool *)osmPool;
-+(DownloadThreadPool *)generalPool;
++ (void)setUserAgent:(NSString *)userAgent;
 
-+(void)setUserAgent:(NSString *)userAgent;
+- (void)dataForUrl:(NSString *)url completion:(void (^)(NSData *data, NSError *error))completion;
+- (void)dataForUrl:(NSString *)url completeOnMain:(BOOL)completeOnMain completion:(void (^)(NSData *data, NSError *error))completion;
+- (void)streamForUrl:(NSString *)url callback:(void (^)(NSInputStream *stream, NSError *error))callback;
 
--(void)dataForUrl:(NSString *)url completion:(void(^)(NSData * data,NSError * error))completion;
--(void)dataForUrl:(NSString *)url completeOnMain:(BOOL)completeOnMain completion:(void(^)(NSData * data,NSError * error))completion;
--(void)streamForUrl:(NSString *)url callback:(void(^)(NSInputStream * stream,NSError * error))callback;
-
--(void)cancelAllDownloads;
--(NSInteger)downloadsInProgress;
+- (void)cancelAllDownloads;
+- (NSInteger)downloadsInProgress;
 
 @end

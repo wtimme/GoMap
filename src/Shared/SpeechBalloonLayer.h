@@ -8,9 +8,8 @@
 
 #import <QuartzCore/QuartzCore.h>
 
-@interface SpeechBalloonLayer : CAShapeLayer
-{
-	CATextLayer	*	_textLayer;
+@interface SpeechBalloonLayer : CAShapeLayer {
+    CATextLayer *_textLayer;
 }
-@property (copy,nonatomic)	NSString	*	text;
+@property(copy, nonatomic) NSString *text;
 @end

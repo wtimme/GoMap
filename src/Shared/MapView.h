@@ -14,9 +14,8 @@
 #import <Cocoa/Cocoa.h>
 #endif
 
-
-#import <CoreLocation/CoreLocation.h>
 #import "VectorMath.h"
+#import <CoreLocation/CoreLocation.h>
 
 @class CAShapeLayer;
 @class AerialList;
@@ -38,196 +37,195 @@
 @class TapAndDragGesture;
 @class VoiceAnnouncement;
 
-
 typedef enum _MapViewState {
-	MAPVIEW_NONE = -1,
-	MAPVIEW_EDITOR,
-	MAPVIEW_EDITORAERIAL,
-	MAPVIEW_AERIAL,
-	MAPVIEW_MAPNIK,
+    MAPVIEW_NONE = -1,
+    MAPVIEW_EDITOR,
+    MAPVIEW_EDITORAERIAL,
+    MAPVIEW_AERIAL,
+    MAPVIEW_MAPNIK,
 } MapViewState;
 
 typedef enum _ViewOverlayMask {
-	VIEW_OVERLAY_LOCATOR	= 1 << 0,
-	VIEW_OVERLAY_GPSTRACE	= 1 << 1,
-	VIEW_OVERLAY_NOTES		= 1 << 2,
-    VIEW_OVERLAY_NONAME     = 1 << 3,
+    VIEW_OVERLAY_LOCATOR = 1 << 0,
+    VIEW_OVERLAY_GPSTRACE = 1 << 1,
+    VIEW_OVERLAY_NOTES = 1 << 2,
+    VIEW_OVERLAY_NONAME = 1 << 3,
 } ViewOverlayMask;
 
 typedef enum {
-	GPS_STATE_NONE,
-	GPS_STATE_LOCATION,
-	GPS_STATE_HEADING,
+    GPS_STATE_NONE,
+    GPS_STATE_LOCATION,
+    GPS_STATE_HEADING,
 } GPS_STATE;
 
 #if TARGET_OS_IPHONE
-@interface MapView : UIView <CLLocationManagerDelegate,UIActionSheetDelegate,UIGestureRecognizerDelegate,SKStoreProductViewControllerDelegate>
+@interface MapView : UIView <CLLocationManagerDelegate, UIActionSheetDelegate, UIGestureRecognizerDelegate, SKStoreProductViewControllerDelegate>
 #else
 @interface MapView : NSView <CLLocationManagerDelegate>
 #endif
 {
 #if TARGET_OS_IPHONE
 #else
-	CALayer							*	_bingMapsLogo;
+    CALayer *_bingMapsLogo;
 #endif
-	RulerLayer						*	_rulerLayer;
+    RulerLayer *_rulerLayer;
 
-	CGPoint								_lastMouseDragPos;
+    CGPoint _lastMouseDragPos;
 
-	NSInteger							_progressActive;
+    NSInteger _progressActive;
 
-	LocationBallLayer				*	_locationBallLayer;
-	CAShapeLayer					*	_addWayProgressLayer;
+    LocationBallLayer *_locationBallLayer;
+    CAShapeLayer *_addWayProgressLayer;
 
-	id									_blinkObject;	// used for creating a moving dots animation during selection
-	NSInteger							_blinkSegment;
-	CAShapeLayer					*	_blinkLayer;
+    id _blinkObject; // used for creating a moving dots animation during selection
+    NSInteger _blinkSegment;
+    CAShapeLayer *_blinkLayer;
 
-	BOOL								_isZoomScroll;	// Command-scroll zooms instead of scrolling (desktop only)
-	BOOL								_isRotateObjectMode;
-	CAShapeLayer					*	_rotateObjectOverlay;
-	OSMPoint							_rotateObjectCenter;
+    BOOL _isZoomScroll; // Command-scroll zooms instead of scrolling (desktop only)
+    BOOL _isRotateObjectMode;
+    CAShapeLayer *_rotateObjectOverlay;
+    OSMPoint _rotateObjectCenter;
 
-	BOOL								_confirmDrag;	// should we confirm that the user wanted to drag the selected object? Only if they haven't modified it since selecting it
+    BOOL _confirmDrag; // should we confirm that the user wanted to drag the selected object? Only if they haven't modified it since selecting it
 
 #if TARGET_OS_IPHONE
-	PushPinView						*	_pushpinView;
-	UILabel							*	_flashLabel;
+    PushPinView *_pushpinView;
+    UILabel *_flashLabel;
 #else
-	HtmlErrorWindow					*	_htmlErrorWindow;
+    HtmlErrorWindow *_htmlErrorWindow;
 #endif
 
-	NSDate							*	_lastErrorDate;		// to prevent spamming of error dialogs
-	NSDate							*	_ignoreNetworkErrorsUntilDate;
+    NSDate *_lastErrorDate; // to prevent spamming of error dialogs
+    NSDate *_ignoreNetworkErrorsUntilDate;
 
-	dispatch_source_t					_mailTimer;
-	VoiceAnnouncement				*	_voiceAnnouncement;
+    dispatch_source_t _mailTimer;
+    VoiceAnnouncement *_voiceAnnouncement;
 
-	TapAndDragGesture				*	_tapAndDragGesture;
+    TapAndDragGesture *_tapAndDragGesture;
 
-	CGPoint								_pushpinDragTotalMove;	// to maintain undo stack
-	BOOL								_gestureDidMove;		// to maintain undo stack
+    CGPoint _pushpinDragTotalMove; // to maintain undo stack
+    BOOL _gestureDidMove;          // to maintain undo stack
 
 #if TARGET_OS_IPHONE
-	UILongPressGestureRecognizer	*	_addNodeButtonLongPressGestureRecognizer;
-	NSTimeInterval						_addNodeButtonTimestamp;
+    UILongPressGestureRecognizer *_addNodeButtonLongPressGestureRecognizer;
+    NSTimeInterval _addNodeButtonTimestamp;
 #endif
 }
 
 #if TARGET_OS_IPHONE
-@property (assign,nonatomic)	MapViewController			*	viewController;
-@property (assign,nonatomic)	IBOutlet FpsLabel			*	fpsLabel;
-@property (assign,nonatomic)	IBOutlet UILabel			*	userInstructionLabel;
-@property (assign,nonatomic)	IBOutlet UIButton			*	compassButton;
+@property(assign, nonatomic) MapViewController *viewController;
+@property(assign, nonatomic) IBOutlet FpsLabel *fpsLabel;
+@property(assign, nonatomic) IBOutlet UILabel *userInstructionLabel;
+@property(assign, nonatomic) IBOutlet UIButton *compassButton;
 
-@property (assign,nonatomic)	IBOutlet UIButton			*	aerialServiceLogo;
-@property (assign,nonatomic)	IBOutlet UIButton			*	helpButton;
-@property (assign,nonatomic)	IBOutlet UIButton			*	centerOnGPSButton;
+@property(assign, nonatomic) IBOutlet UIButton *aerialServiceLogo;
+@property(assign, nonatomic) IBOutlet UIButton *helpButton;
+@property(assign, nonatomic) IBOutlet UIButton *centerOnGPSButton;
 
-@property (assign,nonatomic)	IBOutlet UIToolbar			*	toolbar;
-@property (assign,nonatomic)	IBOutlet UIButton			*	addNodeButton;
-@property (assign,nonatomic)	IBOutlet UIActivityIndicatorView	*	progressIndicator;
+@property(assign, nonatomic) IBOutlet UIToolbar *toolbar;
+@property(assign, nonatomic) IBOutlet UIButton *addNodeButton;
+@property(assign, nonatomic) IBOutlet UIActivityIndicatorView *progressIndicator;
 
-@property (assign,nonatomic)	IBOutlet UISegmentedControl *	editControl;
-@property (strong,nonatomic)	NSArray						*	editControlActions;
+@property(assign, nonatomic) IBOutlet UISegmentedControl *editControl;
+@property(strong, nonatomic) NSArray *editControlActions;
 #endif
 
-@property (readonly,nonatomic)	CLLocationManager			*	locationManager;
-@property (readonly,nonatomic)	CLLocation					*	currentLocation;
-@property (assign,nonatomic)	BOOL							userOverrodeLocationPosition;	// prevent gps updates from re-centering the view
-@property (assign,nonatomic)	BOOL							userOverrodeLocationZoom;		// prevent gps updates from changing the zoom level
+@property(readonly, nonatomic) CLLocationManager *locationManager;
+@property(readonly, nonatomic) CLLocation *currentLocation;
+@property(assign, nonatomic) BOOL userOverrodeLocationPosition; // prevent gps updates from re-centering the view
+@property(assign, nonatomic) BOOL userOverrodeLocationZoom;     // prevent gps updates from changing the zoom level
 
-@property (assign,nonatomic)	MapViewState					viewState;			// layer currently displayed
-@property (assign,nonatomic)	BOOL							viewStateZoomedOut;	// override layer because we're zoomed out
-@property (assign,nonatomic)	ViewOverlayMask					viewOverlayMask;
+@property(assign, nonatomic) MapViewState viewState;  // layer currently displayed
+@property(assign, nonatomic) BOOL viewStateZoomedOut; // override layer because we're zoomed out
+@property(assign, nonatomic) ViewOverlayMask viewOverlayMask;
 
-@property (readonly,nonatomic)	OsmNotesDatabase			*	notesDatabase;
-@property (readonly,nonatomic)	NSMutableDictionary			*	notesViewDict;
+@property(readonly, nonatomic) OsmNotesDatabase *notesDatabase;
+@property(readonly, nonatomic) NSMutableDictionary *notesViewDict;
 
-@property (readonly,nonatomic)	MercatorTileLayer			*	aerialLayer;
-@property (readonly,nonatomic)	MercatorTileLayer			*	mapnikLayer;
-@property (readonly,nonatomic)	EditorMapLayer				*	editorLayer;
-@property (readonly,nonatomic)	GpxLayer					*	gpxLayer;
-@property (readonly,nonatomic)  MercatorTileLayer           *   noNameLayer;
-@property (readonly,nonatomic)	Buildings3DView				*	buildings3D;
+@property(readonly, nonatomic) MercatorTileLayer *aerialLayer;
+@property(readonly, nonatomic) MercatorTileLayer *mapnikLayer;
+@property(readonly, nonatomic) EditorMapLayer *editorLayer;
+@property(readonly, nonatomic) GpxLayer *gpxLayer;
+@property(readonly, nonatomic) MercatorTileLayer *noNameLayer;
+@property(readonly, nonatomic) Buildings3DView *buildings3D;
 
 // overlays
-@property (readonly,nonatomic)	MercatorTileLayer			*	locatorLayer;
-@property (readonly,nonatomic)	MercatorTileLayer			*	gpsTraceLayer;
-@property (readonly,nonatomic)	NSArray						*	backgroundLayers;	// list of all layers that need to be resized, etc.
+@property(readonly, nonatomic) MercatorTileLayer *locatorLayer;
+@property(readonly, nonatomic) MercatorTileLayer *gpsTraceLayer;
+@property(readonly, nonatomic) NSArray *backgroundLayers; // list of all layers that need to be resized, etc.
 
-@property (assign,nonatomic)	OSMTransform					screenFromMapTransform;
-@property (readonly,nonatomic)	OSMTransform					mapFromScreenTransform;
+@property(assign, nonatomic) OSMTransform screenFromMapTransform;
+@property(readonly, nonatomic) OSMTransform mapFromScreenTransform;
 
-@property (assign,nonatomic)	GPS_STATE						gpsState;
-@property (assign,nonatomic)	BOOL							gpsInBackground;
-@property (readonly,nonatomic)	PushPinView					*	pushpinView;
-@property (assign,nonatomic)	BOOL							silentUndo;	// don't flash message about undo
+@property(assign, nonatomic) GPS_STATE gpsState;
+@property(assign, nonatomic) BOOL gpsInBackground;
+@property(readonly, nonatomic) PushPinView *pushpinView;
+@property(assign, nonatomic) BOOL silentUndo; // don't flash message about undo
 
-@property (strong,nonatomic)	AerialList					*	customAerials;
+@property(strong, nonatomic) AerialList *customAerials;
 
-@property (readonly,nonatomic)	CGFloat							birdsEyeRotation;
-@property (readonly,nonatomic)	CGFloat							birdsEyeDistance;
+@property(readonly, nonatomic) CGFloat birdsEyeRotation;
+@property(readonly, nonatomic) CGFloat birdsEyeDistance;
 
-@property (assign,nonatomic)	BOOL							enableBirdsEye;
-@property (assign,nonatomic)	BOOL							enableRotation;
-@property (assign,nonatomic)	BOOL							enableUnnamedRoadHalo;
-@property (assign,nonatomic)	BOOL							enableGpxLogging;
-@property (assign,nonatomic)	BOOL							enableTurnRestriction;
-@property (assign,nonatomic)	BOOL							enableAutomaticCacheManagement;
+@property(assign, nonatomic) BOOL enableBirdsEye;
+@property(assign, nonatomic) BOOL enableRotation;
+@property(assign, nonatomic) BOOL enableUnnamedRoadHalo;
+@property(assign, nonatomic) BOOL enableGpxLogging;
+@property(assign, nonatomic) BOOL enableTurnRestriction;
+@property(assign, nonatomic) BOOL enableAutomaticCacheManagement;
 
-@property (readonly,nonatomic)	CAShapeLayer				*	crossHairs;
+@property(readonly, nonatomic) CAShapeLayer *crossHairs;
 
-@property (readonly,nonatomic)	NSString					*	countryCodeForLocation;
+@property(readonly, nonatomic) NSString *countryCodeForLocation;
 
-@property (readonly,nonatomic)	CGPoint							pushpinPosition;
+@property(readonly, nonatomic) CGPoint pushpinPosition;
 
--(void)updateAerialAttributionButton;
--(void)updateEditControl;				// show/hide edit control based on selection
+- (void)updateAerialAttributionButton;
+- (void)updateEditControl; // show/hide edit control based on selection
 
--(void)viewDidAppear;
--(void)save;
--(void)discardStaleData;
+- (void)viewDidAppear;
+- (void)save;
+- (void)discardStaleData;
 
-+(OSMRect)mapRectForLatLonRect:(OSMRect)latLon;
++ (OSMRect)mapRectForLatLonRect:(OSMRect)latLon;
 
-@property (assign,nonatomic)	BOOL	locating;
--(void)locationUpdatedTo:(CLLocation *)newLocation;
--(void)rotateToNorth;
+@property(assign, nonatomic) BOOL locating;
+- (void)locationUpdatedTo:(CLLocation *)newLocation;
+- (void)rotateToNorth;
 
--(OSMRect)screenLongitudeLatitude;
--(CGPoint)screenPointForLatitude:(double)latitude longitude:(double)longitude birdsEye:(BOOL)birdsEye;
--(CLLocationCoordinate2D)longitudeLatitudeForScreenPoint:(CGPoint)point birdsEye:(BOOL)birdsEye;
+- (OSMRect)screenLongitudeLatitude;
+- (CGPoint)screenPointForLatitude:(double)latitude longitude:(double)longitude birdsEye:(BOOL)birdsEye;
+- (CLLocationCoordinate2D)longitudeLatitudeForScreenPoint:(CGPoint)point birdsEye:(BOOL)birdsEye;
 
--(OSMPoint)screenPointFromMapPoint:(OSMPoint)point birdsEye:(BOOL)birdsEye;
--(OSMPoint)mapPointFromScreenPoint:(OSMPoint)point birdsEye:(BOOL)birdsEye;
+- (OSMPoint)screenPointFromMapPoint:(OSMPoint)point birdsEye:(BOOL)birdsEye;
+- (OSMPoint)mapPointFromScreenPoint:(OSMPoint)point birdsEye:(BOOL)birdsEye;
 
--(OSMRect)boundingScreenRectForMapRect:(OSMRect)mapRect;
--(OSMRect)boundingMapRectForScreenRect:(OSMRect)screenRect;
--(OSMRect)boundingMapRectForScreen;
+- (OSMRect)boundingScreenRectForMapRect:(OSMRect)mapRect;
+- (OSMRect)boundingMapRectForScreenRect:(OSMRect)screenRect;
+- (OSMRect)boundingMapRectForScreen;
 
--(void)setTransformForLatitude:(double)latitude longitude:(double)longitude width:(double)widthDegrees;
--(double)metersPerPixel;
+- (void)setTransformForLatitude:(double)latitude longitude:(double)longitude width:(double)widthDegrees;
+- (double)metersPerPixel;
 
--(void)progressIncrement:(BOOL)animate;
--(void)progressDecrement;
--(void)progressAnimate;
+- (void)progressIncrement:(BOOL)animate;
+- (void)progressDecrement;
+- (void)progressAnimate;
 
--(void)flashMessage:(NSString *)message;
--(void)flashMessage:(NSString *)message duration:(NSTimeInterval)duration;
--(void)presentError:(NSError *)error flash:(BOOL)flash;
+- (void)flashMessage:(NSString *)message;
+- (void)flashMessage:(NSString *)message duration:(NSTimeInterval)duration;
+- (void)presentError:(NSError *)error flash:(BOOL)flash;
 
--(void)setAerialTileService:(AerialService *)service;
+- (void)setAerialTileService:(AerialService *)service;
 
--(BOOL)isLocationSpecified;
+- (BOOL)isLocationSpecified;
 
--(IBAction)requestAerialServiceAttribution:(id)sender;
--(IBAction)centerOnGPS:(id)sender;
--(IBAction)compassPressed:(id)sender;
--(void)removePin;
--(void)refreshPushpinText;
--(void)placePushpinForSelection;
--(void)placePushpinAtPoint:(CGPoint)point object:(OsmBaseObject *)object;
+- (IBAction)requestAerialServiceAttribution:(id)sender;
+- (IBAction)centerOnGPS:(id)sender;
+- (IBAction)compassPressed:(id)sender;
+- (void)removePin;
+- (void)refreshPushpinText;
+- (void)placePushpinForSelection;
+- (void)placePushpinAtPoint:(CGPoint)point object:(OsmBaseObject *)object;
 
 - (IBAction)undo:(id)sender;
 - (IBAction)redo:(id)sender;
@@ -240,9 +238,9 @@ typedef enum {
 - (void)setTagsForCurrentObject:(NSDictionary *)tags;
 #endif
 
--(void)updateNotesFromServerWithDelay:(CGFloat)delay;
--(void)refreshNoteButtonsFromDatabase;
+- (void)updateNotesFromServerWithDelay:(CGFloat)delay;
+- (void)refreshNoteButtonsFromDatabase;
 
--(void)askToRate:(NSInteger)uploadCount;
+- (void)askToRate:(NSInteger)uploadCount;
 
 @end

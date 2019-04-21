@@ -12,22 +12,21 @@
 
 @class MapView;
 
-
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic)	UIWindow			*	window;
-@property (weak,nonatomic)		MapView				*	mapView;
+@property(strong, nonatomic) UIWindow *window;
+@property(weak, nonatomic) MapView *mapView;
 
-@property (strong,nonatomic)	NSString			*	userName;
-@property (strong,nonatomic)	NSString			*	userPassword;
+@property(strong, nonatomic) NSString *userName;
+@property(strong, nonatomic) NSString *userPassword;
 
-@property (readonly,nonatomic)	BOOL					isAppUpgrade;
+@property(readonly, nonatomic) BOOL isAppUpgrade;
 
-@property (strong,nonatomic)	ExternalGPS			*	externalGPS;
+@property(strong, nonatomic) ExternalGPS *externalGPS;
 
--(NSString *)appName;
--(NSString *)appVersion;
+- (NSString *)appName;
+- (NSString *)appVersion;
 - (NSString *)appBuildNumber;
 
-+(AppDelegate *) getAppDelegate;
++ (AppDelegate *)getAppDelegate;
 @end

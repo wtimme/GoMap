@@ -10,15 +10,13 @@
 
 @class MapView;
 
-
-@interface RulerLayer : CALayer
-{
-	CAShapeLayer	*	_shapeLayer;
-	CATextLayer		*	_metricTextLayer;
-	CATextLayer		*	_britishTextLayer;
+@interface RulerLayer : CALayer {
+    CAShapeLayer *_shapeLayer;
+    CATextLayer *_metricTextLayer;
+    CATextLayer *_britishTextLayer;
 }
-@property (assign,nonatomic) MapView	*	mapView;
+@property(assign, nonatomic) MapView *mapView;
 
--(void)updateDisplay;
+- (void)updateDisplay;
 
 @end

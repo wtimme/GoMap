@@ -6,24 +6,23 @@
 //  Copyright (c) 2012 Bryce Cogswell. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "CommonTagList.h"
 #import "POITypeViewController.h"
+#import <UIKit/UIKit.h>
 
 @class OsmBaseObject;
 @class CommonTagList;
 
-@interface POICommonTagsViewController : UITableViewController<UITextFieldDelegate,POITypeViewControllerDelegate>
-{
-	CommonTagList				*	_tags;
-	IBOutlet UIBarButtonItem	*	_saveButton;
-	BOOL							_keyboardShowing;
+@interface POICommonTagsViewController : UITableViewController <UITextFieldDelegate, POITypeViewControllerDelegate> {
+    CommonTagList *_tags;
+    IBOutlet UIBarButtonItem *_saveButton;
+    BOOL _keyboardShowing;
 }
-@property (nonatomic) 	CommonTagGroup	*	drillDownGroup;
+@property(nonatomic) CommonTagGroup *drillDownGroup;
 
 - (IBAction)textFieldReturn:(id)sender;
 
--(IBAction)cancel:(id)sender;
--(IBAction)done:(id)sender;
+- (IBAction)cancel:(id)sender;
+- (IBAction)done:(id)sender;
 
 @end

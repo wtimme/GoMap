@@ -10,17 +10,16 @@
 
 @class OsmMapData;
 
-@interface UploadViewController : UIViewController <UITextViewDelegate,MFMailComposeViewControllerDelegate,UIAlertViewDelegate>
-{
-	OsmMapData							*	_mapData;
-	IBOutlet UITextView					*	_xmlTextView;
-	IBOutlet UITextView					*	_commentTextView;
-	IBOutlet UIBarButtonItem			*	_commitButton;
-	IBOutlet UIBarButtonItem			*	_cancelButton;
-	IBOutlet UIActivityIndicatorView	*	_progressView;
-	IBOutlet UIButton					*	_sendMailButton;
-	IBOutlet UIButton					*	_editXmlButton;
+@interface UploadViewController : UIViewController <UITextViewDelegate, MFMailComposeViewControllerDelegate, UIAlertViewDelegate> {
+    OsmMapData *_mapData;
+    IBOutlet UITextView *_xmlTextView;
+    IBOutlet UITextView *_commentTextView;
+    IBOutlet UIBarButtonItem *_commitButton;
+    IBOutlet UIBarButtonItem *_cancelButton;
+    IBOutlet UIActivityIndicatorView *_progressView;
+    IBOutlet UIButton *_sendMailButton;
+    IBOutlet UIButton *_editXmlButton;
 }
--(IBAction)editXml:(id)sender;
--(IBAction)sendMail:(id)sender;
+- (IBAction)editXml:(id)sender;
+- (IBAction)sendMail:(id)sender;
 @end

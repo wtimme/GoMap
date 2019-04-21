@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 Bryce Cogswell. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
 #import "MapView.h"
+#import <Cocoa/Cocoa.h>
 
 @class ChangesWindowController;
 @class TagEditorWindowController;
@@ -15,31 +15,28 @@
 @class TextInputWindowController;
 @class UsersWindowController;
 
-
-@interface MainWindowController : NSWindowController
-{
-	TagEditorWindowController		*	_tagEditorWindowController;
-	UsersWindowController			*	_usersWindowController;
-	ChangesWindowController			*	_changesWindowController;
-	TagInfoEditorWindowController	*	_tagTypesEditorWindowController;
-	TextInputWindowController		*	_goToLocationWindow;
+@interface MainWindowController : NSWindowController {
+    TagEditorWindowController *_tagEditorWindowController;
+    UsersWindowController *_usersWindowController;
+    ChangesWindowController *_changesWindowController;
+    TagInfoEditorWindowController *_tagTypesEditorWindowController;
+    TextInputWindowController *_goToLocationWindow;
 }
 
-@property (assign,nonatomic) IBOutlet MapView	*	mapView;
+@property(assign, nonatomic) IBOutlet MapView *mapView;
 
+- (IBAction)showUsers:(id)sender;
+- (IBAction)showInGoogleMaps:(id)sender;
+- (IBAction)showInPotlatch2:(id)sender;
+- (IBAction)editTags:(id)sender;
+- (IBAction)removeObject:(id)sender;
+- (IBAction)purgeOsmCachedData:(id)sender;
+- (IBAction)purgeMapnikTileCache:(id)sender;
+- (IBAction)purgeBingTileCache:(id)sender;
+- (IBAction)goToLocation:(id)sender;
 
--(IBAction)showUsers:(id)sender;
--(IBAction)showInGoogleMaps:(id)sender;
--(IBAction)showInPotlatch2:(id)sender;
--(IBAction)editTags:(id)sender;
--(IBAction)removeObject:(id)sender;
--(IBAction)purgeOsmCachedData:(id)sender;
--(IBAction)purgeMapnikTileCache:(id)sender;
--(IBAction)purgeBingTileCache:(id)sender;
--(IBAction)goToLocation:(id)sender;
+- (IBAction)commitChangeset:(id)sender;
 
--(IBAction)commitChangeset:(id)sender;
-
--(IBAction)editTagInfo:(id)sender;
+- (IBAction)editTagInfo:(id)sender;
 
 @end
