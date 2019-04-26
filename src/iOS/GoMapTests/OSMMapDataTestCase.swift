@@ -20,6 +20,12 @@ class OSMMapDataTestCase: XCTestCase {
         userDefaults = createDedicatedUserDefaults()
         mapData = OsmMapData(database: databaseMock,
                              userDefaults: userDefaults)
+        
+        // Setup the `undoContext` closure. This is necessary, as `OsmMapData` relies on it being present.
+        // Otherwise, the app crashes.
+        mapData.undoContextForComment = { _ in
+            return [:]
+        }
     }
 
     override func tearDown() {
