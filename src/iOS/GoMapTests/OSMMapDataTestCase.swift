@@ -24,6 +24,8 @@ class OSMMapDataTestCase: XCTestCase {
         userDefaults = nil
     }
     
+    // MARK: setServer
+    
     func testSetServerShouldAddThePathSeparatorSuffixIfItDoesNotExist() {
         let hostname = "https://example.com"
         mapData.setServer(hostname)
