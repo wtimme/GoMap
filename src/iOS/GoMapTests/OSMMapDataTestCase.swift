@@ -50,5 +50,73 @@ class OSMMapDataTestCase: XCTestCase {
         
         XCTAssertEqual(OSM_API_URL, hostname)
     }
+    
+    // MARK: NSCoding
+    
+    func testNSCodingShouldProperlyEncodeAndDecodeNodes() {
+        // Given
+        let node = mapData.createNode(atLocation: CLLocationCoordinate2D.makeBerlinCoordinate()).require()
+        let encodingKey = "lorem-ipsum"
+        
+        // When
+        let archiver = NSKeyedArchiver()
+        archiver.encode(mapData, forKey: encodingKey)
+        
+        let unarchiver = NSKeyedUnarchiver(forReadingWith: archiver.encodedData)
+        let unarchivedObject = unarchiver.decodeObject(forKey: encodingKey).require()
+        
+        // Then
+        guard let unarchivedMapData = unarchivedObject as? OsmMapData else {
+            XCTFail()
+            return
+        }
+        
+        XCTAssertNotNil(unarchivedMapData.node(forRef: node.ident),
+                        "The unarchived map data should contain the previously created node.")
+    }
+    
+    func testNSCodingShouldProperlyEncodeAndDecodeWays() {
+        // Given
+        let way = mapData.createWay().require()
+        let encodingKey = "lorem-ipsum"
+        
+        // When
+        let archiver = NSKeyedArchiver()
+        archiver.encode(mapData, forKey: encodingKey)
+        
+        let unarchiver = NSKeyedUnarchiver(forReadingWith: archiver.encodedData)
+        let unarchivedObject = unarchiver.decodeObject(forKey: encodingKey).require()
+        
+        // Then
+        guard let unarchivedMapData = unarchivedObject as? OsmMapData else {
+            XCTFail()
+            return
+        }
+        
+        XCTAssertNotNil(unarchivedMapData.way(forRef: way.ident),
+                        "The unarchived map data should contain the previously created way.")
+    }
+    
+    func testNSCodingShouldProperlyEncodeAndDecodeRelations() {
+        // Given
+        let relation = mapData.createRelation().require()
+        let encodingKey = "lorem-ipsum"
+        
+        // When
+        let archiver = NSKeyedArchiver()
+        archiver.encode(mapData, forKey: encodingKey)
+        
+        let unarchiver = NSKeyedUnarchiver(forReadingWith: archiver.encodedData)
+        let unarchivedObject = unarchiver.decodeObject(forKey: encodingKey).require()
+        
+        // Then
+        guard let unarchivedMapData = unarchivedObject as? OsmMapData else {
+            XCTFail()
+            return
+        }
+        
+        XCTAssertNotNil(unarchivedMapData.relation(forRef: relation.ident),
+                        "The unarchived map data should contain the previously created relation.")
+    }
 
 }
