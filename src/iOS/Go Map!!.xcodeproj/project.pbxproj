@@ -501,6 +501,7 @@
 		6442666722540EDF00C0D545 /* Lock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6442666422540EDF00C0D545 /* Lock.swift */; };
 		6442666822540EDF00C0D545 /* Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6442666522540EDF00C0D545 /* Disposable.swift */; };
 		6442666922540EDF00C0D545 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6442666622540EDF00C0D545 /* Observable.swift */; };
+		647D09F22272EF9C00FB7A76 /* CLLocationCoordinate2D+MakeCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647D09F12272EF9C00FB7A76 /* CLLocationCoordinate2D+MakeCoordinate.swift */; };
 		647F46CE2253EA4C00CEC482 /* MeasureDirectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647F46CD2253EA4C00CEC482 /* MeasureDirectionViewModel.swift */; };
 		647F46D12253F08200CEC482 /* HeadingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647F46D02253F08200CEC482 /* HeadingProvider.swift */; };
 		64C968452261ED3100351C0C /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64C968442261ED3100351C0C /* Media.xcassets */; };
@@ -1123,6 +1124,7 @@
 		6442666422540EDF00C0D545 /* Lock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lock.swift; sourceTree = "<group>"; };
 		6442666522540EDF00C0D545 /* Disposable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disposable.swift; sourceTree = "<group>"; };
 		6442666622540EDF00C0D545 /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		647D09F12272EF9C00FB7A76 /* CLLocationCoordinate2D+MakeCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+MakeCoordinate.swift"; sourceTree = "<group>"; };
 		647F46CD2253EA4C00CEC482 /* MeasureDirectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureDirectionViewModel.swift; sourceTree = "<group>"; };
 		647F46D02253F08200CEC482 /* HeadingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadingProvider.swift; sourceTree = "<group>"; };
 		64C968442261ED3100351C0C /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
@@ -1896,6 +1898,7 @@
 				64348CF7225E867800ADE7FB /* HeadingProviderMock.swift */,
 				64348CF8225E867800ADE7FB /* MeasureDirectionViewModelDelegateMock.swift */,
 				64348CF9225E867800ADE7FB /* CLHeadingMock.swift */,
+				647D09F12272EF9C00FB7A76 /* CLLocationCoordinate2D+MakeCoordinate.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -2588,6 +2591,7 @@
 				64348CED225E7CD900ADE7FB /* GoMapTests.swift in Sources */,
 				64348CFB225E867800ADE7FB /* HeadingProviderMock.swift in Sources */,
 				64E21EB822651F2D004605D7 /* XCTestCase+UserDefaults.swift in Sources */,
+				647D09F22272EF9C00FB7A76 /* CLLocationCoordinate2D+MakeCoordinate.swift in Sources */,
 				64C072FE22622B9C00598078 /* Require.swift in Sources */,
 				64348CFD225E867800ADE7FB /* CLHeadingMock.swift in Sources */,
 				64348D03225E8E4300ADE7FB /* OsmNode_DirectionTestCase.swift in Sources */,
