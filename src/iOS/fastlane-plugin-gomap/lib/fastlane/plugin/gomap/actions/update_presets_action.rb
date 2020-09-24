@@ -25,6 +25,10 @@ module Fastlane
         defaults_url = "https://raw.githubusercontent.com/openstreetmap/iD/#{tag}/dist/data/preset_defaults.min.json"
         defaults_file = "../presets/defaults.json"
         download(defaults_url, defaults_file)
+
+        fields_url = "https://raw.githubusercontent.com/openstreetmap/iD/#{tag}/dist/data/preset_fields.min.json"
+        fields_file = "../presets/fields.json"
+        download(fields_url, fields_file)
       end
 
       def self.download(url, path)
