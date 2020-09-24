@@ -17,6 +17,10 @@ module Fastlane
         address_formats_url = "https://raw.githubusercontent.com/openstreetmap/iD/#{tag}/dist/data/address_formats.min.json"
         address_formats_file = "../presets/address-formats.json"
         download(address_formats_url, address_formats_file)
+
+        categories_url = "https://raw.githubusercontent.com/openstreetmap/iD/#{tag}/dist/data/preset_categories.min.json"
+        categories_file = "../presets/categories.json"
+        download(categories_url, categories_file)
       end
 
       def self.download(url, path)
