@@ -21,6 +21,10 @@ module Fastlane
         categories_url = "https://raw.githubusercontent.com/openstreetmap/iD/#{tag}/dist/data/preset_categories.min.json"
         categories_file = "../presets/categories.json"
         download(categories_url, categories_file)
+
+        defaults_url = "https://raw.githubusercontent.com/openstreetmap/iD/#{tag}/dist/data/preset_defaults.min.json"
+        defaults_file = "../presets/defaults.json"
+        download(defaults_url, defaults_file)
       end
 
       def self.download(url, path)
