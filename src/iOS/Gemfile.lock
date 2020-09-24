@@ -1,3 +1,8 @@
+PATH
+  remote: fastlane-plugin-gomap
+  specs:
+    fastlane-plugin-gomap (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -158,6 +163,7 @@ PLATFORMS
 DEPENDENCIES
   fastlane
   fastlane-plugin-appicon
+  fastlane-plugin-gomap!
 
 BUNDLED WITH
    1.17.3
