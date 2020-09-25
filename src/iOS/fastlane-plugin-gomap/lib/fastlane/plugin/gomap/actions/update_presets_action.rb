@@ -51,11 +51,12 @@ module Fastlane
       def self.update_icons()
         presets_file = "../presets/presets.json"
 
+        UI.message("Reading icons names from presets.json...")
+
         file = File.read(presets_file)
         data_hash = JSON.parse(file)
 
-        font_awesome_regular_icons = Set.new
-        font_awesome_solid_icons = Set.new
+        font_awesome_icons = Set.new
         id_svg_poi_icons = Set.new
         maki_icons = Set.new
         temaki_icons = Set.new
@@ -66,10 +67,8 @@ module Fastlane
 
           if prefixed_icon_name.nil?
             # Ignore `nil`
-          elsif prefixed_icon_name.start_with?("far-")
-            font_awesome_regular_icons.add(prefixed_icon_name)
-          elsif prefixed_icon_name.start_with?("fas-")
-            font_awesome_solid_icons.add(prefixed_icon_name)
+          elsif prefixed_icon_name.start_with?("far-") || prefixed_icon_name.start_with?("fas-")
+            font_awesome_icons.add(prefixed_icon_name)
           elsif prefixed_icon_name.start_with?("iD-")
             id_svg_poi_icons.add(prefixed_icon_name)
           elsif prefixed_icon_name.start_with?("maki-")
@@ -83,12 +82,19 @@ module Fastlane
           end
         end
 
-        UI.message("Found #{font_awesome_regular_icons.size} Regular Font Awesome icons.")
-        UI.message("Found #{font_awesome_solid_icons.size} Solid Font Awesome icons.")
-        UI.message("Found #{id_svg_poi_icons.size} iD SVG POI icons.")
-        UI.message("Found #{maki_icons.size} Maki icons.")
-        UI.message("Found #{temaki_icons.size} Temaki icons.")
-        UI.message("Found #{tnp_icons.size} TNP icons.")
+        UI.message("Finished reading icon names from presets.")
+        UI.verbose("- #{font_awesome_icons.size} Font Awesome icons")
+        UI.verbose("- #{id_svg_poi_icons.size} iD SVG POI icons")
+        UI.verbose("- #{maki_icons.size} Maki icons")
+        UI.verbose("- #{temaki_icons.size} Temaki icons")
+        UI.verbose("- #{tnp_icons.size} TNP icons")
+
+        total_number_of_icons = font_awesome_icons.size +
+          id_svg_poi_icons.size +
+          maki_icons.size +
+          temaki_icons.size +
+          tnp_icons.size
+        UI.success("Found #{total_number_of_icons} icons.")
 
         unless unsupported_icons.empty?
           UI.message("#{unsupported_icons.size} icons are not supported at the moment: #{unsupported_icons}")
