@@ -3,6 +3,7 @@ require_relative '../helper/gomap_helper'
 require "open-uri"
 require "fileutils"
 require "json"
+require "set"
 
 module Fastlane
   module Actions
@@ -44,6 +45,53 @@ module Fastlane
           f.write(pretty_json)
         }
         when Tempfile then io.close; FileUtils.mv(io.path, path)
+        end
+      end
+
+      def self.update_icons()
+        presets_file = "../presets/presets.json"
+
+        file = File.read(presets_file)
+        data_hash = JSON.parse(file)
+
+        font_awesome_regular_icons = Set.new
+        font_awesome_solid_icons = Set.new
+        id_svg_poi_icons = Set.new
+        maki_icons = Set.new
+        temaki_icons = Set.new
+        tnp_icons = Set.new
+        unsupported_icons = Set.new
+        data_hash.each do |_, preset_details|
+          prefixed_icon_name = preset_details["icon"]
+
+          if prefixed_icon_name.nil?
+            # Ignore `nil`
+          elsif prefixed_icon_name.start_with?("far-")
+            font_awesome_regular_icons.add(prefixed_icon_name)
+          elsif prefixed_icon_name.start_with?("fas-")
+            font_awesome_solid_icons.add(prefixed_icon_name)
+          elsif prefixed_icon_name.start_with?("iD-")
+            id_svg_poi_icons.add(prefixed_icon_name)
+          elsif prefixed_icon_name.start_with?("maki-")
+            maki_icons.add(prefixed_icon_name)
+          elsif prefixed_icon_name.start_with?("temaki-")
+            temaki_icons.add(prefixed_icon_name)
+          elsif prefixed_icon_name.start_with?("tnp-")
+            tnp_icons.add(prefixed_icon_name)
+          else
+            unsupported_icons.add(prefixed_icon_name)
+          end
+        end
+
+        UI.message("Found #{font_awesome_regular_icons.size} Regular Font Awesome icons.")
+        UI.message("Found #{font_awesome_solid_icons.size} Solid Font Awesome icons.")
+        UI.message("Found #{id_svg_poi_icons.size} iD SVG POI icons.")
+        UI.message("Found #{maki_icons.size} Maki icons.")
+        UI.message("Found #{temaki_icons.size} Temaki icons.")
+        UI.message("Found #{tnp_icons.size} TNP icons.")
+
+        unless unsupported_icons.empty?
+          UI.message("#{unsupported_icons.size} icons are not supported at the moment: #{unsupported_icons}")
         end
       end
 
