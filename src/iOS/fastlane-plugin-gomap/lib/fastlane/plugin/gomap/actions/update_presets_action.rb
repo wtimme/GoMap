@@ -8,31 +8,62 @@ module Fastlane
   module Actions
     class UpdatePresetsAction < Action
       def self.run(params)
+        @tag = "v2.18.5"
+        @preset_directory = "../presets"
+
         downloadLatestPresets
       end
 
       def self.downloadLatestPresets()
-        tag = "v2.18.5"
+        update_address_formats()
+        update_categories()
+        update_defaults()
+        update_fields()
+        update_presets()
+      end
 
-        address_formats_url = "https://raw.githubusercontent.com/openstreetmap/iD/#{tag}/dist/data/address_formats.min.json"
-        address_formats_file = "../presets/address-formats.json"
-        download_json(address_formats_url, address_formats_file)
+      def self.update_address_formats()
+        url = "https://raw.githubusercontent.com/openstreetmap/iD/#{@tag}/dist/data/address_formats.min.json"
+        filename = "address-formats.json"
 
-        categories_url = "https://raw.githubusercontent.com/openstreetmap/iD/#{tag}/dist/data/preset_categories.min.json"
-        categories_file = "../presets/categories.json"
-        download_json(categories_url, categories_file)
+        update_preset_json(url, filename)
+      end
 
-        defaults_url = "https://raw.githubusercontent.com/openstreetmap/iD/#{tag}/dist/data/preset_defaults.min.json"
-        defaults_file = "../presets/defaults.json"
-        download_json(defaults_url, defaults_file)
+      def self.update_categories()
+        url = "https://raw.githubusercontent.com/openstreetmap/iD/#{@tag}/dist/data/preset_categories.min.json"
+        filename = "categories.json"
 
-        fields_url = "https://raw.githubusercontent.com/openstreetmap/iD/#{tag}/dist/data/preset_fields.min.json"
-        fields_file = "../presets/fields.json"
-        download_json(fields_url, fields_file)
+        update_preset_json(url, filename)
+      end
 
-        presets_url = "https://raw.githubusercontent.com/openstreetmap/iD/#{tag}/dist/data/preset_presets.min.json"
-        presets_file = "../presets/presets.json"
-        download_json(presets_url, presets_file)
+      def self.update_defaults()
+        url = "https://raw.githubusercontent.com/openstreetmap/iD/#{@tag}/dist/data/preset_defaults.min.json"
+        filename = "defaults.json"
+
+        update_preset_json(url, filename)
+      end
+
+      def self.update_fields()
+        url = "https://raw.githubusercontent.com/openstreetmap/iD/#{@tag}/dist/data/preset_fields.min.json"
+        filename = "fields.json"
+
+        update_preset_json(url, filename)
+      end
+
+      def self.update_presets()
+        url = "https://raw.githubusercontent.com/openstreetmap/iD/#{@tag}/dist/data/preset_presets.min.json"
+        filename = "presets.json"
+
+        update_preset_json(url, filename)
+      end
+
+      def self.update_preset_json(url, filename)
+        UI.message("Updating #{filename}...")
+
+        file = "#{@preset_directory}/#{filename}"
+        download_json(url, file)
+
+        UI.success("Successfully updated #{filename}.")
       end
 
       def self.download_json(url, path)
