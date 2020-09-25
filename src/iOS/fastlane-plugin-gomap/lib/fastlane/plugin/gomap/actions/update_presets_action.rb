@@ -17,26 +17,26 @@ module Fastlane
 
         address_formats_url = "https://raw.githubusercontent.com/openstreetmap/iD/#{tag}/dist/data/address_formats.min.json"
         address_formats_file = "../presets/address-formats.json"
-        download(address_formats_url, address_formats_file)
+        download_json(address_formats_url, address_formats_file)
 
         categories_url = "https://raw.githubusercontent.com/openstreetmap/iD/#{tag}/dist/data/preset_categories.min.json"
         categories_file = "../presets/categories.json"
-        download(categories_url, categories_file)
+        download_json(categories_url, categories_file)
 
         defaults_url = "https://raw.githubusercontent.com/openstreetmap/iD/#{tag}/dist/data/preset_defaults.min.json"
         defaults_file = "../presets/defaults.json"
-        download(defaults_url, defaults_file)
+        download_json(defaults_url, defaults_file)
 
         fields_url = "https://raw.githubusercontent.com/openstreetmap/iD/#{tag}/dist/data/preset_fields.min.json"
         fields_file = "../presets/fields.json"
-        download(fields_url, fields_file)
+        download_json(fields_url, fields_file)
 
         presets_url = "https://raw.githubusercontent.com/openstreetmap/iD/#{tag}/dist/data/preset_presets.min.json"
         presets_file = "../presets/presets.json"
-        download(presets_url, presets_file)
+        download_json(presets_url, presets_file)
       end
 
-      def self.download(url, path)
+      def self.download_json(url, path)
         case io = open(url)
         when StringIO then File.open(path, 'w') { |f|
           json = JSON.parse(io.string)
