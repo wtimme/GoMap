@@ -9,13 +9,15 @@ module Fastlane
   module Actions
     class UpdatePresetsAction < Action
       def self.run(params)
-        @tag = "v2.18.5"
+        @tag = get_latest_iD_tag
         @preset_directory = "../presets"
 
         downloadLatestPresets
       end
 
       def self.downloadLatestPresets()
+        UI.message("Updating presets to #{@tag}...")
+
         update_address_formats()
         update_categories()
         update_defaults()
