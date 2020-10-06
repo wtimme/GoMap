@@ -3,6 +3,7 @@ require_relative '../helper/gomap_helper'
 require "open-uri"
 require "fileutils"
 require "json"
+require "net/http"
 
 module Fastlane
   module Actions
@@ -20,6 +21,15 @@ module Fastlane
         update_defaults()
         update_fields()
         update_presets()
+      end
+
+      def self.get_latest_iD_tag()
+        url = "https://api.github.com/repos/openstreetmap/iD/releases/latest"
+        uri = URI(url)
+        response = Net::HTTP.get(uri)
+        release_details = JSON.parse(response)
+
+        release_details["tag_name"]
       end
 
       def self.update_address_formats()
